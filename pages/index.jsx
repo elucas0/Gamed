@@ -5,6 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Select } from 'react-select';
+import gameList from '../public/data/mydata.json'
+
+function SearchBar () {
+    const searchList = projectList.map()
+}
 
 
 function ButtonList( {setImage} ) {
