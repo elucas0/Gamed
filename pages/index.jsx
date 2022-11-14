@@ -5,11 +5,33 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Select } from 'react-select';
-import gameList from '../public/data/mydata.json'
+import { data } from 'autoprefixer';
+var gameList = require('../public/data/mydata.json');
 
-function SearchBar () {
-    const searchList = projectList.map()
-}
+// function SearchBar () {
+//     const [selectedOption, handleChange] = useState(null);
+    
+//     const searchList = gameList.map(
+//         ({ game_name }) => {
+//             return {
+//                 value: game_name,
+//                 label: game_name
+//             }
+//         }
+//     );
+
+//     return (
+//         <div>
+//             <Select
+//                 value={selectedOption}
+//                 options={searchList}
+//                 onChange={handleChange}
+//                 placeholder= "Search for a game"
+//                 openMenuOnClick={false}
+//             />
+//         </div>
+//     );
+// }
 
 
 function ButtonList( {setImage} ) {
@@ -48,29 +70,63 @@ function ButtonList( {setImage} ) {
 
 export default function Home() {
     const [image, setImage] = useState("/images/01.jpg");
-    // const[buttons, guess] = useState(Array(6));
+    const [value, setValue] = useState('');
+
+    const onChange = (event) => {
+        setValue(event.target.value);
+    }
+
+    const onSearch = (searchTerm) => {
+        setValue(searchTerm);
+        //api to fetch the search result
+        console.log('search', searchTerm);
+    }
+
     return (
         <Layout home>
             <Head>
                 <title>Gamed - Daily videogame guessing game</title>
             </Head>
             <div>
-            <div>
-            <Image className='mb-5'
-                priority
-                src={image}
-                height={300}
-                width={960}
-                alt=""
-            />
-        </div>
+                <div>
+                    <Image className='mb-5'
+                        priority
+                        src={image}
+                        height={300}
+                        width={960}
+                        alt=""
+                    />
+                </div>
             </div>
-            <div className=''>
+            <div>
                 <ButtonList setImage={setImage} />
             </div>
-            {/* <div>
-                <SearchBar/>
-            </div> */}
+            <div className='mt-6'>
+                <div className="flex justify-center -skew-x-12">
+                    <input type="text" value={value} onChange={onChange} placeholder="Search for game or guess to skip"
+                            className='border-solid border-4 border-yellow p-2 m-1 font-poppinslight w-6/12 transition ease-in-out focus:border-purple focus:outline-none'/>
+                    {/* <button className='bg-slate-500' onClick={() => onSearch(value) }> Search </button> */}
+                </div>
+                <div className='flex justify-center'>
+                    <div className='bg-black text-white  flex flex-col border-solid border-2 border-purple w-6/12 empty:border-none '>
+                        {gameList.filter(item => {
+                            const searchTerm = value.toLowerCase();
+                            const gameName = item.game_name.toLowerCase();
+
+                            return searchTerm && gameName.startsWith(searchTerm) && gameName !== searchTerm;
+                        }).slice(0, 10)
+                        .map((item) => (
+                            <div 
+                                onClick={() => onSearch(item.game_name)}
+                                className='cursor-pointer text-start m-1 hover:bg-purple font-poppinslight transition ease-in-out hover:font-bold'
+                                key={item.game_name}
+                                >{item.game_name}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
         </Layout>
     );
 }

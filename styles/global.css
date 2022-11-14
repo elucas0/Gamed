@@ -10,4 +10,10 @@ html {
 @font-face {
     font-family: "Poppins";
     src: url("../public/fonts/Poppins/Poppins-Black.ttf");
+    
   }
+
+@font-face {
+    font-family: "PoppinsLight";
+    src: url("../public/fonts/Poppins/Poppins-Regular.ttf");
+}
