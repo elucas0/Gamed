@@ -31,7 +31,7 @@ export default function SearchBar ( {setValue, value} ) {
                 </ul>
             </div>
             <div className="flex justify-center">
-                <input type="text" value={value} onChange={onChange} placeholder="Search for game or guess to skip"
+                <input type="text" value={value} onChange={onChange} placeholder="Search for game or skip"
                         className='border-solid border-4 border-yellow p-2 m-1 font-poppinslight w-9/12 transition ease-in-out focus:border-purple focus:outline-none focus:-skew-x-12'/>
             </div>
         </div>

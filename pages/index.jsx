@@ -20,6 +20,13 @@ export default function Home() {
         {id: 1, number:1},
     ]);
 
+    const RenderAttempts = () => {
+        if(buttons.length === 5) {
+            return (<h2 className='font-poppins text-white text-xl'>1 attempt remaining</h2>);
+        }
+        return (<h2 className='font-poppins text-white text-xl'>{7 - buttons.length} attempts remaining</h2>);
+    }
+
     return (
         <Layout home>
             <Head>
@@ -39,8 +46,11 @@ export default function Home() {
             <div>
                 <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
                 {!isEnd && <>
-                <SearchBar setValue={setValue} value={value}/>
-                <GuessButton buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage}/>
+                    <SearchBar setValue={setValue} value={value}/>
+                    <GuessButton buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage}/>
+                    <div className='flex justify-center mb-6'>
+                    <RenderAttempts/>
+                    </div>
                 </>
                 }
                 {isWon &&
