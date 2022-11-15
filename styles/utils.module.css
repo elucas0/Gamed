@@ -1,3 +1,22 @@
+.image {
+    animation: border_color_anim 30s infinite;
+}
+
+@keyframes border_color_anim {
+    0% {
+        box-shadow: 0 0 60px 5px #6225E6;
+    }
+    25% {
+        box-shadow: 0 0 60px 1px #FBC638;
+    }
+    50% {
+        box-shadow: 0 0 60px 1px #FBC638;
+    }
+    100% {
+        box-shadow: 0 0 60px 5px #6225E6;
+    }
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -17,6 +36,7 @@
       transform: skewX(-15deg);
       align-items: center;
       cursor: pointer;
+      user-select: none;
   }
 
   .cta:focus {

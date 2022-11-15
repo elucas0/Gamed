@@ -63,6 +63,9 @@
         "game_name": "Red Dead Redemption 2"
     },
     {
+        "game_name": "Assassin's Creed Valhalla"
+    },
+    {
         "game_name": "Assassin's Creed Odyssey"
     },
     {
@@ -138,9 +141,6 @@
         "game_name": "Shadow Of The Tomb Raider"
     },
     {
-        "game_name": "Far Cry 5"
-    },
-    {
         "game_name": "Battlefield V"
     },
     {
@@ -193,5 +193,17 @@
     },
     {
         "game_name": "Call Of Duty: Modern Warfare 2"
+    },
+    {
+        "game_name": "Mass Effect: Andromeda"
+    },
+    {
+        "game_name": "Mass Effect 3"
+    },
+    {
+        "game_name": "Mass Effect 2"
+    },
+    {
+        "game_name": "Mass Effect"
     }
 ]
