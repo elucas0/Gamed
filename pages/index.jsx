@@ -9,7 +9,7 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gameName, setGame] = useState("Death Stranding");
+    const [gameName, setGame] = useState("Assassin's Creed Unity");
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
@@ -45,6 +45,7 @@ export default function Home() {
                         height={720}
                         width={1280}
                         alt=""
+                        quality={100}
                     />
                 </div>
             </div>
