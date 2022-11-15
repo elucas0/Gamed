@@ -18,7 +18,7 @@
       align-items: center;
       cursor: pointer;
   }
-  
+
   .cta:focus {
      outline: none; 
   }

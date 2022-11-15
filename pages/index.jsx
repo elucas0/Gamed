@@ -6,10 +6,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Select } from 'react-select';
 import { data } from 'autoprefixer';
+import { render } from 'react-dom';
 var gameList = require('../public/data/mydata.json');
 
-function GuessComponent( {setImage} ) {
-    const response = "God Of War"
+function GuessComponent( {setImage, mainGameName} ) {
+    const [won, setWon] = useState(false);
+    const [isEnd, setEnd] = useState(false);
+    const gameName = mainGameName;
 
     const [buttons, addButton] = useState(
         [
@@ -26,19 +29,23 @@ function GuessComponent( {setImage} ) {
     }
 
     const guess = (value) => {
-        if (value !== response){
-            if(buttons.length <= 5){
-                addButton([...buttons, {id: buttons.length + 1, number: buttons.length + 1}]);
-                setImage("/images/0" + (buttons.length + 1) + ".jpg");
+        {
+        if(buttons.length <= 5){
+            addButton([...buttons, {id: buttons.length + 1, number: buttons.length + 1}]);
+            setImage("/images/" + gameName + "/0" + (buttons.length + 1) + ".jpg");
+            console.log("/images/" + gameName + "/0" + (buttons.length + 1) + ".jpg");
+            if (value === gameName.toLowerCase()) {
+                setWon(true);
             }
         } else {
-            alert('Won');
+            setEnd(true);
+            }
         }
     }
     
     return (
         <><div className='flex justify-center mb-5 text-black font-bold space-x-3'>
-            {buttons.map((button) => <button onClick={() => setImage("/images/0" + button.number + ".jpg")} className="bg-yellow px-3 py-1 sm:text-2xl -skew-x-12">{button.number}</button>)}
+            {buttons.map((button) => <button onClick={() => setImage("/images/" + gameName + "/0" + (button.number) + ".jpg")} className="bg-yellow px-3 py-1 sm:text-2xl -skew-x-12">{button.number}</button>)}
         </div>
             <div className='mb-5'>
                 <div className='relative'>
@@ -65,7 +72,8 @@ function GuessComponent( {setImage} ) {
                 </div>
             </div>
             <div className={styles.wrapper}>
-                <a className={styles.cta} onClick={() => guess(value)}>
+            {!won && !isEnd &&
+                <a className={styles.cta} onClick={() => guess(value.toLowerCase())}>    
                     <span className={styles.span}>GUESS</span>
                     <span className={styles.span}>
                         <svg width="40px" height="40px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -77,12 +85,18 @@ function GuessComponent( {setImage} ) {
                         </svg>
                     </span>
                 </a>
-        </div></>
+            }{won && !isEnd &&
+                <h1 className='font-poppins text-white'>GG you've found {gameName} in {buttons.length - 1} guesses</h1>
+            }{isEnd &&
+                <h1 className='font-poppins text-white'>Better luck tomorrow, it was {gameName}</h1>
+            }
+            </div></>
     );
 }
 
 export default function Home() {
-    const [image, setImage] = useState("/images/01.jpg");
+    const gameName = ("Assassin's Creed Unity");
+    const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
 
     return (
         <Layout home>
@@ -94,14 +108,14 @@ export default function Home() {
                     <Image className='mb-5'
                         priority
                         src={image}
-                        height={300}
-                        width={960}
+                        height={720}
+                        width={1280}
                         alt=""
                     />
                 </div>
             </div>
             <div>
-                <GuessComponent setImage={setImage} />
+                <GuessComponent setImage={setImage} mainGameName={gameName} />
             </div>
         </Layout>
     );
