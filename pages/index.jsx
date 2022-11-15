@@ -1,10 +1,8 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, {siteTitle} from '../components/layout';
 import styles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { render } from 'react-dom';
 import GuessButton from '../components/guessButton';
 import SearchBar from '../components/searchBar';
 import ShareButton from '../components/shareButton';
@@ -25,7 +23,7 @@ export default function Home() {
     return (
         <Layout home>
             <Head>
-                <title>Gamed - Daily videogame guessing game</title>
+                <title>{siteTitle}</title>
             </Head>
             <div>
                 <div className={styles.image}>

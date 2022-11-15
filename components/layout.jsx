@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 const name = "Gamed";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Gamed - Daily videogame guessing game";
 
 export default function Layout({ children, home }) {
     return (
@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
                     <Link href="/">{name}</Link>
                 </div>
                 <div className="px-3 text-2xl bg-purple font-poppins text-white ">
-                    <Link href={"posts/first-post"}>About</Link>
+                    <Link href={"archive"}>Archive</Link>
                 </div>
             </header>
             <main>{children}</main>
