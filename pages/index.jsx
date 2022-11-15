@@ -9,19 +9,24 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const gameName = ("Death Stranding");
+    const [gameName, setGame] = useState("Death Stranding");
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
-    const [copyText, setCopyText] = useState('');
     const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
     const [buttons, addButton] = useState(
         [
         {id: 1, number:1},
     ]);
 
+    const changeGame = () => {
+        if (new Date().getHours() === 0) {
+            setGame("For Honor");
+        }
+    }
+
     const RenderAttempts = () => {
-        if(buttons.length === 5) {
+        if(buttons.length === 6) {
             return (<h2 className='font-poppins text-white text-xl'>1 attempt remaining</h2>);
         }
         return (<h2 className='font-poppins text-white text-xl'>{7 - buttons.length} attempts remaining</h2>);
@@ -64,7 +69,7 @@ export default function Home() {
                     </div>
                 }
                 {isEnd &&
-                    <ShareButton setCopyText={setCopyText} copyText={copyText}/>
+                    <ShareButton buttons={buttons}/>
                 }
             </div>
         </Layout>

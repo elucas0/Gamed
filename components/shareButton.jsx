@@ -1,14 +1,19 @@
 import styles from '../styles/utils.module.css';
 import copy from "copy-to-clipboard"
+import { useState } from 'react';
 
-export default function ShareButton ( {setCopyText, copyText}) {
-    
-    const handleCopyText = () => {
-        setCopyText("Test");
+export default function ShareButton ( {buttons}) {
+    const [copyText, setCopyText] = useState('');
+
+    const handleCopy = () => {
+        //const text = buttons.map((button) => button.number).join('');
+        const text = buttons.map((button) => { return '🟥' });
+        setCopyText(text);
+        
     }
 
     const copyToClipboard = () => {
-        setCopyText("Test");
+        handleCopy();
         copy(copyText);
         alert(`You have copied "${copyText}"`);
     }
