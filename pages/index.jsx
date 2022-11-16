@@ -14,7 +14,7 @@ export default function Home() {
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
-    const [results, setResults] = useState(gamedNb + "\n🎮⬛ ⬛ ⬛ ⬛ ⬛ ⬛");
+    const [results, setResults] = useState(gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/ ");
     const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
     const [buttons, addButton] = useState(
         [
