@@ -5,10 +5,10 @@ export default function FirstPost() {
     return (
         <Layout>
             <Head>
-                <title>Gamed - Archive</title>
+                <title>Gamed - About</title>
             </Head>
-            <h1 className="font-poppins text-white text-xl">
-                Nothing for now...
+            <h1 className="text-3xl text-center">
+                About me
             </h1>
         </Layout>
     );
