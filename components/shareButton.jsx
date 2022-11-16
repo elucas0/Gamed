@@ -6,7 +6,7 @@ export default function ShareButton({ isWon, results, buttons, addButton }) {
     const [copyText, setCopyText] = useState("");
 
     useEffect(() => {       
-        for (let i = buttons.length; i < 7; i++) {
+        for (let i = buttons.length; i < 6; i++) {
             addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
         } 
         setCopyText(results);
