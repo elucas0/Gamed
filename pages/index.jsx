@@ -9,8 +9,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState("Gamed #2");
-    const [gameName, setGame] = useState("Horizon Zero Dawn");
+    const [gamedNb, setGamedNb] = useState("Gamed #3");
+    const [gameName, setGame] = useState("Control");
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
