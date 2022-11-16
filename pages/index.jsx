@@ -9,7 +9,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gameName, setGame] = useState("Red Dead Redemption 2");
+    const [gamedNb, setGamedNb] = useState("Gamed #2");
+    const [gameName, setGame] = useState("Horizon Zero Dawn");
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
@@ -50,27 +51,32 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
-                {!isEnd && <>
-                    <SearchBar setValue={setValue} value={value} />
-                    <GuessButton buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage} />
+                <div className="flex justify-center mb-6 font-bold space-x-3">
+                    <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
+                </div>
+                {!isWon && isEnd &&
                     <div className='flex justify-center mb-6'>
-                        <RenderAttempts />
+                        <h2 className='text-xl'>Better luck tomorrow, it was {gameName}</h2>
                     </div>
-                </>
                 }
                 {isWon &&
                     <div className='flex justify-center mb-6'>
                         <h2 className='text-xl'>GG, you have found {gameName}</h2>
                     </div>
                 }
-                {!isWon && isEnd &&
-                    <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>Better luck tomorrow, it was {gameName}</h2>
-                    </div>
-                }
-                {isEnd &&
-                    <ShareButton buttons={buttons} />
+                {isEnd
+                    ? <ShareButton isWon={isWon} gamedNb={gamedNb} buttons={buttons} />
+                    : <>
+                        <div className="mb-6">
+                            <SearchBar setValue={setValue} value={value} />
+                        </div>
+                        <div className='flex justify-center mb-6'>
+                            <RenderAttempts />
+                        </div>
+                        <div className='flex justify-center items-center mb-6'>
+                            <GuessButton buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage} />
+                        </div>
+                    </>
                 }
             </div>
         </Layout>
