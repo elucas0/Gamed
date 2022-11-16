@@ -2,26 +2,14 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ isWon, gamedNb, buttons, addButton }) {
+export default function ShareButton({ isWon, results, buttons, addButton }) {
     const [copyText, setCopyText] = useState("");
 
-    useEffect(() => {
-        let shareText = gamedNb + "\n🎮⬛ ⬛ ⬛ ⬛ ⬛ ⬛";
-        if (isWon) {
-            for (let i = 0; i < buttons.length - 1; i++) {
-                if (buttons[i].number === buttons.length - 1) {
-                    shareText = shareText.replace("⬛", "🟨");
-                } else {
-                    shareText = shareText.replace("⬛", "🟪");
-                }
-            }
-            for (let i = buttons.length; i < 7; i++) {
-                addButton((buttons) => [...buttons, { id: i, number: i }]);
-            }
-        } else {
-            shareText = gamedNb + "\n🎮🟪 🟪 🟪 🟪 🟪 🟪";
-        }
-        setCopyText(shareText);
+    useEffect(() => {       
+        for (let i = buttons.length; i < 7; i++) {
+            addButton((buttons) => [...buttons, { id: i, number: i }]);
+        } 
+        setCopyText(results);
     });
 
     const copyToClipboard = () => {

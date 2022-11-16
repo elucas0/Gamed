@@ -14,6 +14,7 @@ export default function Home() {
     const [value, setValue] = useState('');
     const [isWon, setWon] = useState(false);
     const [isEnd, setEnd] = useState(false);
+    const [results, setResults] = useState(gamedNb + "\n🎮⬛ ⬛ ⬛ ⬛ ⬛ ⬛");
     const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
     const [buttons, addButton] = useState(
         [
@@ -65,7 +66,7 @@ export default function Home() {
                     </div>
                 }
                 {isEnd
-                    ? <ShareButton isWon={isWon} gamedNb={gamedNb} buttons={buttons} addButton={addButton} />
+                    ? <ShareButton isWon={isWon} results={results} buttons={buttons} addButton={addButton} />
                     : <>
                         <div className="mb-6">
                             <SearchBar setValue={setValue} value={value} />
@@ -74,7 +75,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton isWon={isWon} gamedNb={gamedNb} setResults={setResults} results={results} buttons={buttons} addButton={addButton} isEnd={isEnd} setEnd={setEnd} setWon={setWon} value={value} gameName={gameName} setImage={setImage} />
                         </div>
                     </>
                 }
