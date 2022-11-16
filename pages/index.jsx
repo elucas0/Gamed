@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                 }
                 {isEnd
-                    ? <ShareButton isWon={isWon} gamedNb={gamedNb} buttons={buttons} />
+                    ? <ShareButton isWon={isWon} gamedNb={gamedNb} buttons={buttons} addButton={addButton} />
                     : <>
                         <div className="mb-6">
                             <SearchBar setValue={setValue} value={value} />

@@ -2,12 +2,11 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ isWon, gamedNb, buttons }) {
+export default function ShareButton({ isWon, gamedNb, buttons, addButton }) {
     const [copyText, setCopyText] = useState("");
 
     useEffect(() => {
         let shareText = gamedNb + "\n🎮⬛ ⬛ ⬛ ⬛ ⬛ ⬛";
-        // fill the shareText with red or green squares depending on the buttons array
         if (isWon) {
             for (let i = 0; i < buttons.length - 1; i++) {
                 if (buttons[i].number === buttons.length - 1) {
@@ -15,6 +14,9 @@ export default function ShareButton({ isWon, gamedNb, buttons }) {
                 } else {
                     shareText = shareText.replace("⬛", "🟪");
                 }
+            }
+            for (let i = buttons.length; i < 7; i++) {
+                addButton((buttons) => [...buttons, { id: i, number: i }]);
             }
         } else {
             shareText = gamedNb + "\n🎮🟪 🟪 🟪 🟪 🟪 🟪";
