@@ -7,7 +7,7 @@ export default function ShareButton({ isWon, results, buttons, addButton }) {
 
     useEffect(() => {       
         for (let i = buttons.length; i < 7; i++) {
-            addButton((buttons) => [...buttons, { id: i, number: i }]);
+            addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
         } 
         setCopyText(results);
     });
