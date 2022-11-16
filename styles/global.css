@@ -5,6 +5,8 @@
 html {
     background-image: url("../public/images/ooorganize.svg");
     background-color: black;
+    color:white;
+    font-family: "Poppins", sans-serif;
 }
 
 @font-face {

@@ -1,175 +1,386 @@
 [
     {
         "game_name": "God Of War",
-        "keywords" : ["Kratos", "Mythology", "Atreus", "Santa Monica", "Sony", "PS4", "Playstation"]
+        "keywords": [
+            "Kratos",
+            "Mythology",
+            "Atreus",
+            "Santa Monica",
+            "Sony",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "For Honor",
-        "keywords" : ["Warriors", "Knights", "Vikings", "Samurai", "Ubisoft"]
+        "keywords": [
+            "Warriors",
+            "Knights",
+            "Vikings",
+            "Samurai",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "The Last Of Us",
-        "keywords" : ["Ellie", "Joel", "Zombies", "Post-Apocalyptic", "Naughty Dog", "Playstation"]
+        "keywords": [
+            "Ellie",
+            "Joel",
+            "Zombies",
+            "Post-Apocalyptic",
+            "Naughty Dog",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Uncharted 4",
-        "keywords" : ["Nathan Drake", "Adventure", "Naughty Dog", "PS4", "Playstation"]
+        "keywords": [
+            "Nathan Drake",
+            "Adventure",
+            "Naughty Dog",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Horizon Zero Dawn",
-        "keywords" : ["Aloy", "Post-Apocalyptic", "Robots", "PS4", "Playstation"]
+        "keywords": [
+            "Aloy",
+            "Post-Apocalyptic",
+            "Robots",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Bloodborne",
-        "keywords" : ["Vampires", "Hunters", "Souls", "From Software", "PS4", "Playstation"]
+        "keywords": [
+            "Vampires",
+            "Hunters",
+            "Souls",
+            "From Software",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "The Last Guardian",
-        "keywords" : ["Trico", "Fumito Ueda", "PS4", "Playstation"]
+        "keywords": [
+            "Trico",
+            "Fumito Ueda",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Days Gone",
-        "keywords" : ["Zombies", "Post-Apocalyptic", "Deacon St. John", "Sony", "PS4", "Playstation"]
+        "keywords": [
+            "Zombies",
+            "Post-Apocalyptic",
+            "Deacon St. John",
+            "Sony",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Ghost Of Tsushima",
-        "keywords" : ["Samurai", "Sucker Punch", "PS4", "Playstation"]
+        "keywords": [
+            "Samurai",
+            "Sucker Punch",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Death Stranding",
-        "keywords" : ["Norman Reedus", "Hideo Kojima", "PS4", "Playstation"]
+        "keywords": [
+            "Norman Reedus",
+            "Hideo Kojima",
+            "PS4",
+            "Playstation"
+        ]
     },
     {
         "game_name": "The Last Of Us Part II",
-        "keywords" : ["Ellie", "Joel", "Zombies", "Post-Apocalyptic", "Naughty Dog", "Playstation"]
+        "keywords": [
+            "Ellie",
+            "Joel",
+            "Zombies",
+            "Post-Apocalyptic",
+            "Naughty Dog",
+            "Playstation"
+        ]
     },
     {
         "game_name": "Forza Horizon 4",
-        "keywords" : ["Cars", "Racing", "Playground Games", "Xbox"]
+        "keywords": [
+            "Cars",
+            "Racing",
+            "Playground Games",
+            "Xbox"
+        ]
     },
     {
         "game_name": "Call Of Duty: Modern Warfare",
-        "keywords" : ["War", "FPS", "Activision"]
+        "keywords": [
+            "War",
+            "FPS",
+            "Activision"
+        ]
     },
     {
         "game_name": "Gears 5",
-        "keywords" : ["War", "FPS", "Xbox"]
+        "keywords": [
+            "War",
+            "FPS",
+            "Xbox"
+        ]
     },
     {
         "game_name": "Halo Infinite",
-        "keywords" : ["War", "FPS", "Xbox"]
+        "keywords": [
+            "War",
+            "FPS",
+            "Xbox"
+        ]
     },
     {
         "game_name": "Cyberpunk 2077",
-        "keywords" : ["V","RPG", "CD Projekt Red"]
+        "keywords": [
+            "V",
+            "RPG",
+            "CD Projekt Red"
+        ]
     },
     {
         "game_name": "The Witcher 3",
-        "keywords" : ["Geralt", "RPG", "CD Projekt Red"]
+        "keywords": [
+            "Geralt",
+            "RPG",
+            "CD Projekt Red"
+        ]
     },
     {
         "game_name": "Starfield",
-        "keywords" : ["Space", "RPG", "Bethesda"]
+        "keywords": [
+            "Space",
+            "RPG",
+            "Bethesda"
+        ]
     },
     {
         "game_name": "Fallout 76",
-        "keywords" : ["Post-Apocalyptic", "RPG", "Bethesda"]
+        "keywords": [
+            "Post-Apocalyptic",
+            "RPG",
+            "Bethesda"
+        ]
     },
     {
         "game_name": "Fallout 4",
-        "keywords" : ["Post-Apocalyptic", "RPG", "Bethesda"]
+        "keywords": [
+            "Post-Apocalyptic",
+            "RPG",
+            "Bethesda"
+        ]
     },
     {
         "game_name": "Fallout 3",
-        "keywords" : ["Post-Apocalyptic", "RPG", "Bethesda"]
+        "keywords": [
+            "Post-Apocalyptic",
+            "RPG",
+            "Bethesda"
+        ]
     },
     {
         "game_name": "Red Dead Redemption 2",
-        "keywords" : ["Arthur Morgan", "John Marston", "Action", "Rockstar"]
+        "keywords": [
+            "Arthur Morgan",
+            "John Marston",
+            "Action",
+            "Rockstar"
+        ]
     },
     {
         "game_name": "Assassin's Creed Valhalla",
-        "keywords" : ["Vikings", "Eivor", "Ubisoft"]
+        "keywords": [
+            "Vikings",
+            "Eivor",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Odyssey",
-        "keywords" : ["Ancient Greece", "Kassandra", "Ubisoft"]
+        "keywords": [
+            "Ancient Greece",
+            "Kassandra",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Origins",
-        "keywords" : ["Ancient Egypt", "Bayek", "Ubisoft"]
+        "keywords": [
+            "Ancient Egypt",
+            "Bayek",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Syndicate",
-        "keywords" : ["London", "Victorian", "Jacob Frye", "Evie Frye", "Ubisoft"]
+        "keywords": [
+            "London",
+            "Victorian",
+            "Jacob Frye",
+            "Evie Frye",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Unity",
-        "keywords" : ["French Revolution", "France", "Arno Dorian", "Ubisoft"]
+        "keywords": [
+            "French Revolution",
+            "France",
+            "Arno Dorian",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Rogue",
-        "keywords" : ["Assassins", "Templars", "Shay Cormac", "Ubisoft"]
+        "keywords": [
+            "Assassins",
+            "Templars",
+            "Shay Cormac",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed IV: Black Flag",
-        "keywords" : ["Pirates", "Edward Kenway", "Ubisoft"]
+        "keywords": [
+            "Pirates",
+            "Edward Kenway",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed III",
-        "keywords" : ["American Revolution", "Connor Kenway", "Ubisoft"]
+        "keywords": [
+            "American Revolution",
+            "Connor Kenway",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Revelations",
-        "keywords" : ["Assassins", "Italy", "Ezio Auditore", "Ubisoft"]
+        "keywords": [
+            "Assassins",
+            "Italy",
+            "Ezio Auditore",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed Brotherhood",
-        "keywords" : ["Assassins", "Italy", "Ezio Auditore", "Ubisoft"]
+        "keywords": [
+            "Assassins",
+            "Italy",
+            "Ezio Auditore",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed II",
-        "keywords" : ["Assassins", "Italy", "Ezio Auditore", "Ubisoft"]
+        "keywords": [
+            "Assassins",
+            "Italy",
+            "Ezio Auditore",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Assassin's Creed",
-        "keywords" : ["Assassins", "Jerusalem", "Altair", "Ubisoft"]
+        "keywords": [
+            "Assassins",
+            "Jerusalem",
+            "Altair",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Watch Dogs 2",
-        "keywords" : ["Hacking", "San Francisco", "Marcus Holloway", "Ubisoft"]
+        "keywords": [
+            "Hacking",
+            "San Francisco",
+            "Marcus Holloway",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Watch Dogs",
-        "keywords" : ["Hacking", "Chicago", "Aiden Pearce", "Ubisoft"]
+        "keywords": [
+            "Hacking",
+            "Chicago",
+            "Aiden Pearce",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry 5",
-        "keywords" : ["Dystopia", "Hope County", "Joseph Seed", "FPS", "Ubisoft"]
+        "keywords": [
+            "Dystopia",
+            "Hope County",
+            "Joseph Seed",
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry 4",
-        "keywords" : ["Kyrat", "FPS", "Ubisoft"]
+        "keywords": [
+            "Kyrat",
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry Primal",
-        "keywords" : ["Prehistoric", "FPS", "Ubisoft"]
+        "keywords": [
+            "Prehistoric",
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry 3",
-        "keywords" : ["Rook Island", "FPS", "Ubisoft"]
+        "keywords": [
+            "Rook Island",
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry 2",
-        "keywords" : ["FPS", "Ubisoft"]
+        "keywords": [
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry",
-        "keywords" : ["FPS", "Ubisoft"]
+        "keywords": [
+            "FPS",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry New Dawn",
-        "keywords" : ["Dystopia", "Post-Apocalyptic", "FPS", "RPG", "Ubisoft"]
+        "keywords": [
+            "Dystopia",
+            "Post-Apocalyptic",
+            "FPS",
+            "RPG",
+            "Ubisoft"
+        ]
     },
     {
         "game_name": "Far Cry 6"

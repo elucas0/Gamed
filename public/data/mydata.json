@@ -1,99 +1,9 @@
 [
     {
-        "game_name": "God Of War"
+        "game_name": "Anthem"
     },
     {
-        "game_name": "For Honor"
-    },
-    {
-        "game_name": "The Last Of Us"
-    },
-    {
-        "game_name": "Uncharted 4"
-    },
-    {
-        "game_name": "Horizon Zero Dawn"
-    },
-    {
-        "game_name": "Bloodborne"
-    },
-    {
-        "game_name": "The Last Guardian"
-    },
-    {
-        "game_name": "Days Gone"
-    },
-    {
-        "game_name": "Ghost Of Tsushima"
-    },
-    {
-        "game_name": "Death Stranding"
-    },
-    {
-        "game_name": "The Last Of Us Part II"
-    },
-    {
-        "game_name": "Forza Horizon 4"
-    },
-    {
-        "game_name": "Call Of Duty: Modern Warfare"
-    },
-    {
-        "game_name": "Gears 5"
-    },
-    {
-        "game_name": "Halo Infinite"
-    },
-    {
-        "game_name": "Cyberpunk 2077"
-    },
-    {
-        "game_name": "The Witcher 3"
-    },
-    {
-        "game_name": "Starfield"
-    },
-    {
-        "game_name": "Fallout 76"
-    },
-    {
-        "game_name": "Fallout 4"
-    },
-    {
-        "game_name": "Fallout 3"
-    },
-    {
-        "game_name": "Red Dead Redemption 2"
-    },
-    {
-        "game_name": "Assassin's Creed Valhalla"
-    },
-    {
-        "game_name": "Assassin's Creed Odyssey"
-    },
-    {
-        "game_name": "Assassin's Creed Origins"
-    },
-    {
-        "game_name": "Assassin's Creed Syndicate"
-    },
-    {
-        "game_name": "Assassin's Creed Unity"
-    },
-    {
-        "game_name": "Assassin's Creed Rogue"
-    },
-    {
-        "game_name": "Assassin's Creed Black Flag"
-    },
-    {
-        "game_name": "Assassin's Creed IV: Black Flag"
-    },
-    {
-        "game_name": "Assassin's Creed III"
-    },
-    {
-        "game_name": "Assassin's Creed Revelations"
+        "game_name": "Assassin's Creed"
     },
     {
         "game_name": "Assassin's Creed Brotherhood"
@@ -102,111 +12,216 @@
         "game_name": "Assassin's Creed II"
     },
     {
-        "game_name": "Assassin's Creed"
+        "game_name": "Assassin's Creed III"
     },
     {
-        "game_name": "Watch Dogs 2"
+        "game_name": "Assassin's Creed IV Black Flag"
     },
     {
-        "game_name": "Watch Dogs"
+        "game_name": "Assassin's Creed Odyssey"
     },
     {
-        "game_name": "Far Cry 5"
+        "game_name": "Assassin's Creed Origins"
     },
     {
-        "game_name": "Far Cry 4"
+        "game_name": "Assassin's Creed Revelations"
     },
     {
-        "game_name": "Far Cry Primal"
+        "game_name": "Assassin's Creed Rogue"
     },
     {
-        "game_name": "Far Cry 3"
+        "game_name": "Assassin's Creed Syndicate"
     },
     {
-        "game_name": "Far Cry 2"
+        "game_name": "Assassin's Creed Unity"
     },
     {
-        "game_name": "Far Cry"
-    },
-    {
-        "game_name": "Far Cry New Dawn"
-    },
-    {
-        "game_name": "Far Cry 6"
-    },
-    {
-        "game_name": "Marvel's Spider-Man"
-    },
-    {
-        "game_name": "Monster Hunter: World"
-    },
-    {
-        "game_name": "Shadow Of The Tomb Raider"
+        "game_name": "Assassin's Creed Valhalla"
     },
     {
         "game_name": "Battlefield V"
     },
     {
-        "game_name": "Metro Exodus"
+        "game_name": "Bloodborne"
     },
     {
-        "game_name": "Resident Evil 2"
+        "game_name": "Call Of Duty Advanced Warfare"
     },
     {
-        "game_name": "Sekiro: Shadows Die Twice"
+        "game_name": "Call Of Duty Black Ops"
     },
     {
-        "game_name": "Doom Eternal"
+        "game_name": "Call Of Duty Black Ops 2"
+    },
+    {
+        "game_name": "Call Of Duty Black Ops 3"
+    },
+    {
+        "game_name": "Call Of Duty Black Ops 4"
+    },
+    {
+        "game_name": "Call Of Duty Ghosts"
+    },
+    {
+        "game_name": "Call Of Duty Infinite Warfare"
+    },
+    {
+        "game_name": "Call Of Duty Modern Warfare"
+    },
+    {
+        "game_name": "Call Of Duty Modern Warfare 2"
+    },
+    {
+        "game_name": "Call Of Duty Modern Warfare 3"
+    },
+    {
+        "game_name": "Call Of Duty WWII"
     },
     {
         "game_name": "Control"
     },
     {
-        "game_name": "Anthem"
+        "game_name": "Cyberpunk 2077"
+    },
+    {
+        "game_name": "Days Gone"
+    },
+    {
+        "game_name": "Death Stranding"
     },
     {
         "game_name": "Devil May Cry 5"
     },
     {
-        "game_name": "Call Of Duty: Ghosts"
+        "game_name": "Dishonored"
     },
     {
-        "game_name": "Call Of Duty: Advanced Warfare"
+        "game_name": "Dishonored 2"
     },
     {
-        "game_name": "Call Of Duty: Infinite Warfare"
+        "game_name": "Doom Eternal"
     },
     {
-        "game_name": "Call Of Duty: WWII"
+        "game_name": "Elden Ring"
     },
     {
-        "game_name": "Call Of Duty: Black Ops 4"
+        "game_name": "Fallout 3"
     },
     {
-        "game_name": "Call Of Duty: Black Ops 3"
+        "game_name": "Fallout 4"
     },
     {
-        "game_name": "Call Of Duty: Black Ops 2"
+        "game_name": "Fallout 76"
     },
     {
-        "game_name": "Call Of Duty: Black Ops"
+        "game_name": "Far Cry"
     },
     {
-        "game_name": "Call Of Duty: Modern Warfare 3"
+        "game_name": "Far Cry 2"
     },
     {
-        "game_name": "Call Of Duty: Modern Warfare 2"
+        "game_name": "Far Cry 3"
     },
     {
-        "game_name": "Mass Effect: Andromeda"
+        "game_name": "Far Cry 4"
     },
     {
-        "game_name": "Mass Effect 3"
+        "game_name": "Far Cry 5"
+    },
+    {
+        "game_name": "Far Cry 6"
+    },
+    {
+        "game_name": "Far Cry New Dawn"
+    },
+    {
+        "game_name": "Far Cry Primal"
+    },
+    {
+        "game_name": "For Honor"
+    },
+    {
+        "game_name": "Forza Horizon 4"
+    },
+    {
+        "game_name": "Gears 5"
+    },
+    {
+        "game_name": "Ghost Of Tsushima"
+    },
+    {
+        "game_name": "God Of War"
+    },
+    {
+        "game_name": "Halo Infinite"
+    },
+    {
+        "game_name": "Horizon Zero Dawn"
+    },
+    {
+        "game_name": "Marvel's Spider-Man"
+    },
+    {
+        "game_name": "Mass Effect"
     },
     {
         "game_name": "Mass Effect 2"
     },
     {
-        "game_name": "Mass Effect"
+        "game_name": "Mass Effect 3"
+    },
+    {
+        "game_name": "Mass Effect Andromeda"
+    },
+    {
+        "game_name": "Metro Exodus"
+    },
+    {
+        "game_name": "Monster Hunter World"
+    },
+    {
+        "game_name": "Red Dead Redemption 2"
+    },
+    {
+        "game_name": "Resident Evil 2"
+    },
+    {
+        "game_name": "Sekiro Shadows Die Twice"
+    },
+    {
+        "game_name": "Shadow Of The Tomb Raider"
+    },
+    {
+        "game_name": "Starfield"
+    },
+    {
+        "game_name": "The Elder Scrolls III Morrowind"
+    },
+    {
+        "game_name": "The Elder Scrolls IV Oblivion"
+    },
+    {
+        "game_name": "The Elder Scrolls V Skyrim"
+    },
+    {
+        "game_name": "The Last Guardian"
+    },
+    {
+        "game_name": "The Last Of Us"
+    },
+    {
+        "game_name": "The Last Of Us Part II"
+    },
+    {
+        "game_name": "The Witcher 3"
+    },
+    {
+        "game_name": "Uncharted 4"
+    },
+    {
+        "game_name": "Watch Dogs"
+    },
+    {
+        "game_name": "Watch Dogs 2"
     }
 ]
