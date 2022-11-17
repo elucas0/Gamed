@@ -28,6 +28,8 @@ export default function FirstPost() {
                         </svg>
                     </button>
                 </div>
+                <p>Source code available on <a className="text-yellow" href="https://github.com/PandAmiral/Gamed">GitHub</a>.</p>
+
             </div>
         </Layout>
     );
