@@ -9,7 +9,7 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(4);
+    const [gamedNb, setGamedNb] = useState(3);
     const [gameName, setGame] = useState("Control");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
