@@ -9,6 +9,7 @@
   "dependencies": {
     "@vercel/analytics": "^0.1.5",
     "classnames": "^2.3.2",
+    "inngest": "^0.8.1",
     "next": "latest",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",

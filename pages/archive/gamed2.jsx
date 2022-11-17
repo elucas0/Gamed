@@ -1,19 +1,16 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import styles from '../styles/utils.module.css';
+import Layout, { siteTitle } from '../../components/layoutArchive';
+import styles from '../../styles/utils.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import GuessButton from '../components/guessButton';
-import SearchBar from '../components/searchBar';
-import ShareButton from '../components/shareButton';
-import ImageButtons from '../components/imageButtons';
+import GuessButton from '../../components/guessButtonArchive';
+import SearchBar from '../../components/searchBar';
+import ImageButtons from '../../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(3);
-    const [gameName, setGame] = useState("Control");
+    const [gameName, setGame] = useState("Horizon Zero Dawn");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [results, setResults] = useState("Gamed #" + gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/ ");
     const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
     const [buttons, addButton] = useState(
         [
@@ -21,19 +18,13 @@ export default function Home() {
         ]);
 
     useEffect(() => {
-        if (localStorage.getItem('played')) {
-            localStorage.setItem('gameState', 'end');
-            setGameState('notPlaying')
-        } else {
-            setGameState("playing");
-        }
+        // if (localStorage.getItem('played')) {
+        //     localStorage.setItem('gameState', gameState);
+        // } else {
+        //     localStorage.setItem('played', true);
+        //     setGameState("playing");
+        // }
     });
-
-    // const changeGame = () => {
-    //     if (new Date().getHours() === 0) {
-    //         setGame("For Honor");
-    //     }
-    // }
 
     const RenderAttempts = () => {
         if (buttons.length === 6) {
@@ -65,7 +56,7 @@ export default function Home() {
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>Better luck tomorrow, it was {gameName}</h2>
+                        <h2 className='text-xl'>It was {gameName}</h2>
                     </div>
                 }
                 {gameState == 'won' &&
@@ -73,9 +64,8 @@ export default function Home() {
                         <h2 className='text-xl'>GG, you have found {gameName}</h2>
                     </div>
                 }
-                {gameState != "playing"
-                    ? <ShareButton results={results} buttons={buttons} addButton={addButton} />
-                    : <>
+                {gameState == 'playing' &&
+                    <>
                         <div className="mb-6">
                             <SearchBar setValue={setValue} value={value} />
                         </div>
@@ -83,7 +73,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton gameState={gameState} setGameState={setGameState} setResults={setResults} results={results} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton gameState={gameState} setGameState={setGameState} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
                         </div>
                     </>
                 }

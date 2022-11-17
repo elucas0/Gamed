@@ -2,13 +2,14 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ isWon, results, buttons, addButton }) {
+export default function ShareButton({ results, buttons, addButton }) {
     const [copyText, setCopyText] = useState("");
 
-    useEffect(() => {       
+    useEffect(() => {
+        localStorage.setItem('played', true);
         for (let i = buttons.length; i < 6; i++) {
             addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
-        } 
+        }
         setCopyText(results);
     });
 
