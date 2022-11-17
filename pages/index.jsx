@@ -22,8 +22,7 @@ export default function Home() {
 
     useEffect(() => {
         if (localStorage.getItem('played')) {
-            localStorage.setItem('gameState', 'end');
-            setGameState('notPlaying')
+            setGameState(localStorage.getItem('gameState'));
         } else {
             setGameState("playing");
         }

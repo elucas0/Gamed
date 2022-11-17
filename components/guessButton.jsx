@@ -14,6 +14,7 @@ export default function GuessButton({ gameState, setGameState, setResults, resul
         } else {
             setResults(results.replace("⬛", "🟪"));
             setGameState("lost");
+            localStorage.setItem('gameState', "lost");
         }
     }
 
