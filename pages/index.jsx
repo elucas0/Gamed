@@ -9,7 +9,7 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(3);
+    const [gamedNb, setGamedNb] = useState(4);
     const [gameName, setGame] = useState("Control");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
@@ -21,11 +21,17 @@ export default function Home() {
         ]);
 
     useEffect(() => {
+        if (localStorage.getItem('gamedNb') != gamedNb) {
+            localStorage.removeItem('played');
+            localStorage.removeItem('gamedNb');
+        }
         if (localStorage.getItem('played')) {
             setGameState(localStorage.getItem('gameState'));
         } else {
             setGameState("playing");
+            localStorage.setItem("gameState", gameState);
         }
+        
     });
 
     // const changeGame = () => {
@@ -73,7 +79,7 @@ export default function Home() {
                     </div>
                 }
                 {gameState != "playing"
-                    ? <ShareButton results={results} buttons={buttons} addButton={addButton} />
+                    ? <ShareButton gamedNb={gamedNb} results={results} buttons={buttons} addButton={addButton} />
                     : <>
                         <div className="mb-6">
                             <SearchBar setValue={setValue} value={value} />

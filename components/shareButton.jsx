@@ -2,11 +2,12 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ results, buttons, addButton }) {
+export default function ShareButton({ gamedNb, results, buttons, addButton }) {
     const [copyText, setCopyText] = useState("");
 
     useEffect(() => {
         localStorage.setItem('played', true);
+        localStorage.setItem('gamedNb', gamedNb);
         for (let i = buttons.length; i < 6; i++) {
             addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
         }
