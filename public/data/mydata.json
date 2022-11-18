@@ -298,5 +298,58 @@
     {
         "game_name": "Watch Dogs 2",
         "number": 42
+    },
+    {
+        "game_name": "Watch Dogs Legion",
+        "number": 42
+    },
+    {
+        "game_name": "Dark Souls",
+        "number": 0
+    },
+    {
+        "game_name": "Dark Souls 2",
+        "number": 0
+    },
+    {
+        "game_name": "Dark Souls 3",
+        "number": 0
+    },
+    {
+        "game_name": "Demon's Souls",
+        "number": 0
+    },
+    {
+        "game_name": "Borderlands 3",
+        "number": 0
+    },
+    {
+        "game_name": "Borderlands 2",
+        "number": 0
+    },
+    {
+        "game_name": "Borderlands",
+        "number": 0
+    },
+    {
+        "game_name": "Borderlands Pre-Sequel",
+        "number": 0
+    },
+    {
+        "game_name": "The Witcher 2",
+        "number": 0
+    },
+    {
+        "game_name": "The Witcher",
+        "number": 0
+    },
+    { 
+        "game_name": "Vampyr",
+        "number": 0
+    },
+    {
+        "game_name": "Diablo 3",
+        "number": 0
     }
+
 ]
