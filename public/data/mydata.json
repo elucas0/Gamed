@@ -350,6 +350,42 @@
     {
         "game_name": "Diablo 3",
         "number": 0
+    },
+    { 
+        "game_name": "Mount & Blade 2",
+        "number": 0
+    },
+    {
+        "game_name": "Mount & Blade Warband",
+        "number": 0
+    },
+    {
+        "game_name": "Mount & Blade",
+        "number": 0
+    },
+    {
+        "game_name": "Star Wars Jedi Fallen Order",
+        "number": 0
+    },
+    {
+        "game_name": "Star Wars Battlefront 2",
+        "number": 0
+    },
+    {
+        "game_name": "Star Wars Battlefront",
+        "number": 0
+    },
+    {
+        "game_name": "Shadow Of Mordor",
+        "number": 0
+    },
+    {
+        "game_name": "Shadow Of War",
+        "number": 0
+    },
+    {
+        "game_name": "Kingdom Come Deliverance",
+        "number": 0
     }
 
 ]
