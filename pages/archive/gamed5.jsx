@@ -8,10 +8,11 @@ import SearchBar from '../../components/searchBar';
 import ImageButtons from '../../components/imageButtons';
 
 export default function Home() {
+    const gamedNb = 5;
     const [gameName, setGame] = useState("Red Dead Redemption 2");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
+    const [image, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [buttons, addButton] = useState(
         [
             { id: 1, number: 1 },

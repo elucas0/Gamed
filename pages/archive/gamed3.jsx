@@ -8,10 +8,11 @@ import SearchBar from '../../components/searchBar';
 import ImageButtons from '../../components/imageButtons';
 
 export default function Home() {
+    const gamedNb = 3;
     const [gameName, setGame] = useState("Horizon Zero Dawn");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
+    const [image, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [buttons, addButton] = useState(
         [
             { id: 1, number: 1 },

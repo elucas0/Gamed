@@ -11,27 +11,32 @@ import ImageButtons from '../components/imageButtons';
 export default function Home() {
     const [gamedNb, setGamedNb] = useState(8);
     const [gameName, setGame] = useState("The Witcher 3");
+    const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [results, setResults] = useState("Gamed #" + gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/ ");
-    const [image, setImage] = useState("/images/" + gameName + "/01.jpg");
     const [buttons, addButton] = useState(
         [
             { id: 1, number: 1 },
         ]);
 
     useEffect(() => {
+        // If the last stored game number is different of the current one, delete the state and start a new game
         if (localStorage.getItem('gamedNb') != gamedNb) {
             localStorage.removeItem('played');
             localStorage.removeItem('gamedNb');
         }
+        // If the last stored game number is the same as the current one, load the state
         if (localStorage.getItem('played')) {
             setGameState(localStorage.getItem('gameState'));
+            setImage("/images/" + gamedNb + "/0" + localStorage.getItem("currentImage") + ".jpg");
+            // Else, start a new game
         } else {
+            localStorage.setItem("gamedNb", gamedNb);
             setGameState("playing");
             localStorage.setItem("gameState", gameState);
         }
-        
+
     });
 
     // const changeGame = () => {
@@ -56,7 +61,7 @@ export default function Home() {
                 <div className={styles.image}>
                     <Image className='mb-6'
                         priority
-                        src={image}
+                        src={currentImage}
                         height={720}
                         width={1280}
                         alt=""
@@ -66,7 +71,7 @@ export default function Home() {
             </div>
             <div>
                 <div className="flex justify-center mb-6 font-bold space-x-3">
-                    <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
+                    <ImageButtons setImage={setImage} buttons={buttons} gamedNb={gamedNb} />
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>
@@ -88,7 +93,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton gameState={gameState} setGameState={setGameState} setResults={setResults} results={results} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton gamedNb={gamedNb} setGameState={setGameState} setResults={setResults} results={results} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
                         </div>
                     </>
                 }

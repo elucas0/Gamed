@@ -1,6 +1,6 @@
 import styles from '../styles/utils.module.css';
 
-export default function GuessButton({ gameState, setGameState, setResults, results, buttons, addButton, value, gameName, setImage }) {
+export default function GuessButton({ gamedNb, setGameState, setResults, results, buttons, addButton, value, gameName, setImage }) {
 
     const guess = (value) => {
         if (value === gameName.toLowerCase()) {
@@ -9,7 +9,8 @@ export default function GuessButton({ gameState, setGameState, setResults, resul
             localStorage.setItem('gameState', "won");
         } else if (buttons.length <= 5) {
             addButton([...buttons, { id: buttons.length + 1, number: buttons.length + 1 }]);
-            setImage("/images/" + gameName + "/0" + (buttons.length + 1) + ".jpg");
+            setImage("/images/" + gamedNb + "/0" + (buttons.length + 1) + ".jpg");
+            localStorage.setItem("currentImage", buttons.length + 1);
             setResults(results.replace("⬛", "🟪"));
         } else {
             setResults(results.replace("⬛", "🟪"));
