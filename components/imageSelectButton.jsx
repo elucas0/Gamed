@@ -2,9 +2,9 @@ import { useEffect } from "react";
 
 export default function ImageSelectButton({ buttonNb, setImage, gamedNb }) {
 
-    useEffect(() => {
-        localStorage.setItem("currentImage", buttonNb);
-    });
+    // useEffect(() => {
+    //     localStorage.setItem("currentImage", buttonNb);
+    // });
 
     return (
         <button

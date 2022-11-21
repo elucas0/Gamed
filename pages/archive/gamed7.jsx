@@ -74,7 +74,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton gameState={gameState} setGameState={setGameState} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton gamedNb={gamedNb} setGameState={setGameState} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
                         </div>
                     </>
                 }

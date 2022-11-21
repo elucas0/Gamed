@@ -7,7 +7,7 @@ export default function ShareButton({ gamedNb, results, buttons, addButton }) {
 
     useEffect(() => {
         localStorage.setItem('played', true);
-        localStorage.setItem('gamedNb', gamedNb);
+        localStorage.setItem('currentImage', localStorage.getItem('currentImage'));
         for (let i = buttons.length; i < 6; i++) {
             addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
         }

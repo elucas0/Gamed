@@ -9,8 +9,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(8);
-    const [gameName, setGame] = useState("The Witcher 3");
+    const [gamedNb, setGamedNb] = useState(9);
+    const [gameName, setGame] = useState("Fallout 76");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
@@ -39,12 +39,6 @@ export default function Home() {
 
     });
 
-    // const changeGame = () => {
-    //     if (new Date().getHours() === 0) {
-    //         setGame("For Honor");
-    //     }
-    // }
-
     const RenderAttempts = () => {
         if (buttons.length === 6) {
             return (<h2 className='text-xl'>1 attempt remaining</h2>);
@@ -57,9 +51,9 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div>
+            <div className='mb-6'>
                 <div className={styles.image}>
-                    <Image className='mb-6'
+                    <Image
                         priority
                         src={currentImage}
                         height={720}
