@@ -9,8 +9,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(8);
-    const [gameName, setGame] = useState("The Witcher 3");
+    const [gamedNb, setGamedNb] = useState(9);
+    const [gameName, setGame] = useState("Fallout 76");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
