@@ -33,7 +33,7 @@ export default function FirstPost() {
                     <Link className={styles.ctaAlt} href={"archive/gamed7"}>
                         7
                     </Link>
-                    <Link className={styles.ctaAlt} href={"archive/gamed7"}>
+                    <Link className={styles.ctaAlt} href={"archive/gamed8"}>
                         8
                     </Link>
                 </div>
