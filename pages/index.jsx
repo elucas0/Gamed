@@ -9,12 +9,11 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(9);
-    const [gameName, setGame] = useState("Fallout 76");
+    const [gamedNb, setGamedNb] = useState(10);
+    const [gameName, setGame] = useState("Cyberpunk 2077");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [results, setResults] = useState("Gamed #" + gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/ ");
     const [buttons, addButton] = useState(
         [
             { id: 1, number: 1 },
@@ -24,7 +23,11 @@ export default function Home() {
         // If the last stored game number is different of the current one, delete the state and start a new game
         if (localStorage.getItem('gamedNb') != gamedNb) {
             localStorage.removeItem('played');
-            localStorage.removeItem('gamedNb');
+            localStorage.removeItem('results')
+            localStorage.setItem('gamedNb', gamedNb);
+            setImage("/images/" + gamedNb + "/01.jpg");
+            localStorage.setItem('currentImage', "1");
+            localStorage.setItem("results", "Gamed #" + gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/");
         }
         // If the last stored game number is the same as the current one, load the state
         if (localStorage.getItem('played')) {
@@ -33,6 +36,7 @@ export default function Home() {
             // Else, start a new game
         } else {
             localStorage.setItem("gamedNb", gamedNb);
+            //setImage("/images/" + gamedNb + "/0" + localStorage.getItem("currentImage") + ".jpg");
             setGameState("playing");
             localStorage.setItem("gameState", gameState);
         }
@@ -78,7 +82,7 @@ export default function Home() {
                     </div>
                 }
                 {gameState != "playing"
-                    ? <ShareButton gamedNb={gamedNb} results={results} buttons={buttons} addButton={addButton} />
+                    ? <ShareButton buttons={buttons} addButton={addButton} />
                     : <>
                         <div className="mb-6">
                             <SearchBar setValue={setValue} value={value} />
@@ -87,7 +91,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton gamedNb={gamedNb} setGameState={setGameState} setResults={setResults} results={results} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton gamedNb={gamedNb} setGameState={setGameState} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
                         </div>
                     </>
                 }

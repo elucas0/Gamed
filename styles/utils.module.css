@@ -29,7 +29,6 @@
 .cta {
     display: flex;
     padding: 5px 20px;
-    font-family: 'Poppins', sans-serif;
     font-size: 2em;
     font-style: italic;
     color: white;
@@ -45,7 +44,6 @@
 .ctaAlt {
 
     display: flex;
-    font-family: 'Poppins', sans-serif;
     font-size: 2em;
     color: white;
     background: #6225E6;
@@ -118,6 +116,18 @@ path.two {
 .cta:hover path.two {
     transform: translateX(0%);
     animation: color_anim 1s infinite 0.4s;
+}
+
+.hidden {
+    padding-top: 0;
+    height: 0;
+    transition: all .2s ease-in-out;
+}
+
+.active{  
+    padding-top: 0.75rem;
+    height:50px;
+    transition: all .2s ease-in-out;
 }
 
 /* SVG animations */

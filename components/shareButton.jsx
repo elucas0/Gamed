@@ -2,8 +2,10 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ gamedNb, results, buttons, addButton }) {
-    const [copyText, setCopyText] = useState("");
+export default function ShareButton({ buttons, addButton }) {
+    const [copyText, setCopyText] = useState();
+    const [isActive, setIsActive] = useState();
+    const [notifyText, setNotifyText] = useState();
 
     useEffect(() => {
         localStorage.setItem('played', true);
@@ -11,36 +13,28 @@ export default function ShareButton({ gamedNb, results, buttons, addButton }) {
         for (let i = buttons.length; i < 6; i++) {
             addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
         }
-        setCopyText(results);
+        setCopyText(localStorage.getItem('results'));
     });
 
     const copyToClipboard = () => {
         copy(copyText);
-
-        // let shareButton = (
-        //     <a className={styles.cta} onClick={copyToClipboard}>
-        //         <span className={styles.span}>COPIED</span>
-        //     </a>
-        // );
-        // setTimeout(() => {
-        //     shareButton = (
-        //         <a className={styles.cta} onClick={copyToClipboard}>
-        //             <span className={styles.span}>SHARE</span>
-        //         </a>
-        //     );
-        // }, 2000);
-        //return shareButton;
+        setNotifyText(copyText.slice(0, -31));
+        setIsActive(current => !current);
+        setTimeout(() => {
+            setIsActive(current => !current);
+        }, 2000);
     };
 
-    const renderButton = () => {
-
-    }
-
     return (
-        <div className="flex justify-center items-center">
-            <a className={styles.cta} onClick={copyToClipboard}>
-                <span className={styles.span}>SHARE</span>
-            </a>
-        </div>
+        <>
+            <div className="fixed top-0 w-full left-0 right-0 text-center bg-purple overflow-hidden">
+                <div className={isActive ? styles.active : styles.hidden}>Copied to clipboard : {notifyText} </div>
+            </div>
+            <div className="flex justify-center items-center">
+                <a className={styles.cta} onClick={copyToClipboard}>
+                    <span className={styles.span}>SHARE</span>
+                </a>
+            </div>
+        </>
     );
 }
