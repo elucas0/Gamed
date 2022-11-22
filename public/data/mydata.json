@@ -386,5 +386,54 @@
     {
         "game_name": "Kingdom Come Deliverance",
         "number": 65
+    },
+    {
+        "game_name": "Just Cause 4",
+        "number": 78
+    },
+    {
+        "game_name": "Just Cause 3",
+        "number": 93
+    },
+    {
+        "game_name": "Dying Light",
+        "number": 1
+    },
+    {
+        "game_name": "Dying Light 2",
+        "number": 1
+    },
+    {
+        "game_name": "Dishonored Death Of The Outsider",
+        "number": 1
+    },
+    {
+        "game_name": "Forza Horizon 3",
+        "number": 1
+    },
+    {
+        "game_name": "Forza Horizon 5",
+        "number": 1
+    },
+    {
+        "game_name": "Forza Motorsport 7",
+        "number": 1
+    },
+    {
+        "game_name": "Gears Of War 4",
+        "number": 1
+    },
+    {
+        "game_name": "Battlefield 2042",
+        "number": 1
+    },
+    {
+        "game_name": "Battlefield 1",
+        "number": 1
+    },
+    {
+        "game_name": "Battlefield Hardline",
+        "number": 1
     }
+
 ]

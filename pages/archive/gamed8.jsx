@@ -18,15 +18,6 @@ export default function Home() {
             { id: 1, number: 1 },
         ]);
 
-    useEffect(() => {
-        // if (localStorage.getItem('played')) {
-        //     localStorage.setItem('gameState', gameState);
-        // } else {
-        //     localStorage.setItem('played', true);
-        //     setGameState("playing");
-        // }
-    });
-
     const RenderAttempts = () => {
         if (buttons.length === 6) {
             return (<h2 className='text-xl'>1 attempt remaining</h2>);

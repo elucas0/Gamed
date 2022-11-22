@@ -8,8 +8,8 @@ import SearchBar from '../../components/searchBar';
 import ImageButtons from '../../components/imageButtons';
 
 export default function Home() {
-    const gamedNb = 7;
-    const [gameName, setGame] = useState("Bloodborne");
+    const gamedNb = 9;
+    const [gameName, setGame] = useState("Fallout 76");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [image, setImage] = useState("/images/" + gamedNb + "/01.jpg");
