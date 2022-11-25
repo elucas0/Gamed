@@ -12,7 +12,7 @@ export default function FirstPost() {
             <h1 className="text-3xl text-center">Archive</h1>
             <div className="flex flex-col">
                 <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
-                    <Link className={styles.ctaAlt} href={"archive/gamed1"}>
+                    <Link className="flex text-3xl bg-purple transition shadow-[6px_6px_0_black] justify-center" href={"archive/gamed1"}>
                         1
                     </Link>
                     <Link className={styles.ctaAlt} href={"archive/gamed2"}>
