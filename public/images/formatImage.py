@@ -20,7 +20,7 @@ for file in files:
 
         # Check if the image is larger than 1280x720
         if width > 1280 or height > 720:
-            # Crop the image to the greatest 16:9 ratio
+            # Crop the image to the greatest 16:9 ratio at the center
             if width > height:
                 img = img.crop((0, 0, height * 16 / 9, height))
             else:

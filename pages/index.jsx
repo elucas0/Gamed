@@ -8,8 +8,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(12);
-    const [gameName, setGame] = useState("Mass Effect Andromeda");
+    const [gamedNb, setGamedNb] = useState(13);
+    const [gameName, setGame] = useState("Diablo 3");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
@@ -64,9 +64,9 @@ export default function Home() {
 
     const RenderAttempts = () => {
         if (currentGuess === 6) {
-            return (<h2 className='text-xl'>1 attempt remaining</h2>);
+            return (<h2 className='text-xl'>1 essai restant</h2>);
         }
-        return (<h2 className='text-xl'>{7 - buttons.length} attempts remaining</h2>);
+        return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
     }
 
     const guess = (value) => {
@@ -112,12 +112,12 @@ export default function Home() {
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>Better luck tomorrow, it was {gameName}</h2>
+                        <h2 className='text-xl'>Dommage, c'était {gameName}</h2>
                     </div>
                 }
                 {gameState == 'won' &&
                     <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>GG, you have found {gameName}</h2>
+                        <h2 className='text-xl'>GG tu as deviné {gameName}</h2>
                     </div>
                 }
                 {gameState != "playing"
@@ -132,8 +132,8 @@ export default function Home() {
                         <div className='flex justify-center items-center mb-6'>
                             <a className={styles.cta} onClick={() => guess(value.toLowerCase())}>
                                 {value !== ''
-                                    ? <span className={styles.span}>GUESS</span>
-                                    : <span className={styles.span}>SKIP</span>
+                                    ? <span className={styles.span}>DEVINER</span>
+                                    : <span className={styles.span}>PASSER</span>
                                 }
                                 <span className={styles.span}>
                                     <svg width="40px" height="40px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

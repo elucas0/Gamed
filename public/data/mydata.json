@@ -462,5 +462,21 @@
     {
         "game_name": "Destiny",
         "number": 1
+    },
+    {
+        "game_name": "Portal 2",
+        "number": 1   
+    },
+    {
+        "game_name": "World Of Warcraft",
+        "number": 1
+    },
+    {
+        "game_name": "Torchlight 2",
+        "number": 1
+    },
+    {
+        "game_name": "Orcs Must Die 3",
+        "number": 1
     }
 ]
