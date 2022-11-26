@@ -45,6 +45,9 @@ export default function FirstPost() {
                     <Link className={styles.ctaAlt} href={"archive/gamed11"}>
                         11
                     </Link>
+                    <Link className={styles.ctaAlt} href={"archive/gamed12"}>
+                        12
+                    </Link>
                 </div>
 
             </div>
