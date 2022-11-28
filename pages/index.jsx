@@ -8,8 +8,8 @@ import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(13);
-    const [gameName, setGame] = useState("Diablo 3");
+    const [gamedNb, setGamedNb] = useState(14);
+    const [gameName, setGame] = useState("Shadow Of Mordor");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
