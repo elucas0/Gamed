@@ -6,7 +6,7 @@ export default function GuessButton({ gamedNb, setGameState, buttons, addButton,
         if (value === gameName.toLowerCase()) {
             setGameState("won");
         } else if (buttons.length <= 5) {
-            addButton([...buttons, { id: buttons.length + 1, number: buttons.length + 1 }]);
+            addButton([...buttons, { number: buttons.length + 1 }]);
             setImage("/images/" + gamedNb + "/0" + (buttons.length + 1) + ".jpg");
         } else {
             setGameState("lost");

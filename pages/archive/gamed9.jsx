@@ -44,7 +44,7 @@ export default function Home() {
             </div>
             <div>
                 <div className="flex justify-center mb-6 font-bold space-x-3">
-                    <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
+                    <ImageButtons gamedNb={gamedNb} setImage={setImage} buttons={buttons} mainGameName={gameName} />
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>

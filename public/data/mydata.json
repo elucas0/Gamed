@@ -478,5 +478,13 @@
     {
         "game_name": "Orcs Must Die 3",
         "number": 1
+    },
+    {
+        "game_name": "Need For Speed Heat",
+        "number": 1
+    },
+    {
+        "game_name": "Need For Speed Payback",
+        "number": 1
     }
 ]
