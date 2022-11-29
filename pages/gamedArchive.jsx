@@ -1,22 +1,33 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layoutArchive';
-import styles from '../../styles/utils.module.css';
+import Layout, { siteTitle } from '../components/layoutArchive';
+import styles from '../styles/utils.module.css';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import GuessButton from '../../components/guessButtonArchive';
-import SearchBar from '../../components/searchBar';
-import ImageButtons from '../../components/imageButtons';
+import { useState } from 'react';
+import GuessButton from 'components/guessButtonArchive';
+import SearchBar from 'components/searchBar';
+import ImageButtons from 'components/imageButtons';
+import { useLocation } from "react-router-dom";
 
-export default function Home() {
-    const gamedNb = 1;
-    const [gameName, setGame] = useState("Death Stranding");
+export default function ArchiveEntry() {
+    const location = useLocation();
+    const gamedNb = location.state;
+    const [gameName, setGame] = useState(gameList[gamedNb - 1].game_name);
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [image, setImage] = useState("/images/" + gamedNb + "/01.jpg");
+    const [image, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [buttons, addButton] = useState(
         [
-            { id: 1, number: 1 },
+            { number: 1 },
         ]);
+    const guessData = {
+        gameName: gameName,
+        gamedNb: gamedNb,
+        buttons: buttons,
+        value: value,
+        setImage: setImage,
+        setGameState: setGameState,
+        addButton: addButton,
+    };
 
     const RenderAttempts = () => {
         if (buttons.length === 6) {
@@ -38,13 +49,12 @@ export default function Home() {
                         height={720}
                         width={1280}
                         alt=""
-                        quality={100}
                     />
                 </div>
             </div>
             <div>
                 <div className="flex justify-center mb-6 font-bold space-x-3">
-                    <ImageButtons setImage={setImage} buttons={buttons} mainGameName={gameName} />
+                    <ImageButtons setImage={setImage} buttons={buttons} gamedNb={gamedNb} />
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>
@@ -72,5 +82,4 @@ export default function Home() {
             </div>
         </Layout>
     );
-}
-
+};

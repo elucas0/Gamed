@@ -7,17 +7,35 @@ import GuessButton from '../components/guessButton';
 import SearchBar from '../components/searchBar';
 import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
+import GuessButton from '../components/guessButton';
+const gameList = require("../public/data/games.json");
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(10);
-    const [gameName, setGame] = useState("Cyberpunk 2077");
-    const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
+    const [gamedNb, setGamedNb] = useState(14);
+    const [gameName, setGame] = useState(gameList[gamedNb - 1].game_name);
+    const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
+    const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [buttons, addButton] = useState(
         [
-            { id: 1, number: 1 },
+            { number: 1 },
         ]);
+    const guessData = {
+        gameName: gameName,
+        gamedNb: gamedNb,
+        buttons: buttons,
+        value: value,
+        setImage: setImage,
+        setGameState: setGameState,
+        addButton: addButton,
+    };
+
+    const setArrayLength = () => {
+        for (let i = buttons.length; i < parseInt(localStorage.getItem("currentGuess")); i++) {
+            addButton((buttons) => [...buttons, { number: i + 1 }]);
+        }
+    };
 
     useEffect(() => {
         // If the last stored game number is different of the current one, delete the state and start a new game
@@ -47,7 +65,7 @@ export default function Home() {
         if (buttons.length === 6) {
             return (<h2 className='text-xl'>1 attempt remaining</h2>);
         }
-        return (<h2 className='text-xl'>{7 - buttons.length} attempts remaining</h2>);
+        return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
     }
 
     return (
@@ -63,7 +81,6 @@ export default function Home() {
                         height={720}
                         width={1280}
                         alt=""
-                        quality={100}
                     />
                 </div>
             </div>
@@ -91,7 +108,7 @@ export default function Home() {
                             <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-6'>
-                            <GuessButton gamedNb={gamedNb} setGameState={setGameState} buttons={buttons} addButton={addButton} value={value} gameName={gameName} setImage={setImage} />
+                            <GuessButton {...guessData}></GuessButton>
                         </div>
                     </>
                 }

@@ -1,13 +1,13 @@
 import styles from '../styles/utils.module.css';
 
-export default function GuessButton({ gamedNb, setGameState, buttons, addButton, value, gameName, setImage }) {
+export default function GuessButton({ gameName, gamedNb, buttons, value, setImage, setGameState, addButton }) {
 
     const guess = (value) => {
         if (value === gameName.toLowerCase()) {
             setGameState("won");
         } else if (buttons.length <= 5) {
-            addButton([...buttons, { id: buttons.length + 1, number: buttons.length + 1 }]);
-            setImage("/images/" + gamedNb + "/0" + (buttons.length + 1) + ".jpg");
+            addButton([...buttons, { number: buttons.length + 1 }]);
+            setImage(`/images/${gamedNb}/0${buttons.length + 1}.jpg`);
         } else {
             setGameState("lost");
         }
@@ -16,8 +16,8 @@ export default function GuessButton({ gamedNb, setGameState, buttons, addButton,
     return (
         <a className={styles.cta} onClick={() => guess(value.toLowerCase())}>
             {value !== ''
-                ? <span className={styles.span}>GUESS</span>
-                : <span className={styles.span}>SKIP</span>
+                ? <span className={styles.span}>DEVINER</span>
+                : <span className={styles.span}>PASSER</span>
             }
             <span className={styles.span}>
                 <svg width="40px" height="40px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
