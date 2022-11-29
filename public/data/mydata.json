@@ -486,5 +486,17 @@
     {
         "game_name": "Need For Speed Payback",
         "number": 1
+    },
+    {
+        "game_name": "Yakuza 0",
+        "number": 1
+    },
+    {
+        "game_name": "Final Fantasy XV",
+        "number": 1
+    },
+    {
+        "game_name": "Metal Gear Solid V",
+        "number": 1
     }
 ]
