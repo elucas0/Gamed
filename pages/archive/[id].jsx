@@ -5,18 +5,21 @@ import Image from 'next/image';
 import { useState } from 'react';
 import GuessButton from 'components/guessButtonArchive';
 import SearchBar from 'components/searchBar';
-import ImageButtons from 'components/imageButtons';
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 
 const gamesArchive = require("../../public/data/archive.json");
 
 export default function ArchiveEntry() {
     const router = useRouter();
     const gamedNb = router.query.id;
-    const gameName = gamesArchive[gamedNb - 1].game_name;
+    console.log(gamedNb);
+    const gameName = "Death Stranding";
+    //const gameName = gamesArchive[gamedNb - 1].game_name;
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [image, setImage] = useState(`/images/${gamedNb}/01.jpg`);
+    // const [image, setImage] = useState(`/images/${gamedNb}/01.jpg`);
+    const [image, setImage] = useState(`/images/1/01.jpg`);
     const [buttons, addButton] = useState(
         [
             { number: 1 },
@@ -94,3 +97,26 @@ export default function ArchiveEntry() {
         </Layout >
     );
 };
+
+function getServersideProps(context) {
+    console.log("context", context);
+    return {
+        props: {
+            gamesArchive,
+        },
+    };
+}
+
+function getStaticPaths() {
+    const paths = gamesArchive.map((game) => {
+        return {
+            params: {
+                id: game.id.toString(),
+            },
+        };
+    });
+    return {
+        paths,
+        fallback: false,
+    };
+}
