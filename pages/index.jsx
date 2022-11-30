@@ -7,7 +7,6 @@ import GuessButton from '../components/guessButton';
 import SearchBar from '../components/searchBar';
 import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
-import GuessButton from '../components/guessButton';
 const gameList = require("../public/data/games.json");
 
 export default function Home() {
@@ -81,6 +80,7 @@ export default function Home() {
                         height={720}
                         width={1280}
                         alt=""
+                        quality={75}
                     />
                 </div>
             </div>

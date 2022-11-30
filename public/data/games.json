@@ -1,6 +1,51 @@
 [
     {
+        "game_name": "Death Stranding"
+    },
+    {
+        "game_name": "Assassin's Creed Unity"
+    },
+    {
+        "game_name": "Horizon Zero Dawn"
+    },
+    {
+        "game_name": "Control"
+    },
+    {
+        "game_name": "Red Dead Redemption 2"
+    },
+    {
+        "game_name": "Dishonored 2"
+    },
+    {
+        "game_name": "Bloodborne"
+    },
+    {
+        "game_name": "The Witcher 3"
+    },
+    {
+        "game_name": "Fallout 76"
+    },
+    {
+        "game_name": "Cyberpunk 2077"
+    },
+    {
+        "game_name": "Assassin's Creed Syndicate"
+    },
+    {
+        "game_name": "Mass Effect Andromeda"
+    },
+    {
+        "game_name": "Diablo 3"
+    },
+    {
+        "game_name": "Shadow Of Mordor"
+    },
+    {
         "game_name": "Forza Motorsport 7"
+    },
+    {
+        "game_name": "Devil May Cry 5"
     },
     {
         "game_name": "Anthem"
@@ -73,9 +118,6 @@
     },
     {
         "game_name": "Days Gone"
-    },
-    {
-        "game_name": "Devil May Cry 5"
     },
     {
         "game_name": "Dishonored"

@@ -15,7 +15,7 @@ export default function Archive() {
             <div className="flex flex-col">
                 <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
                     {gamesArchive.map((game) => (
-                        <Link key={game.id} className={styles.ctaAlt} href={{ pathname: '/gamedArchive/[id]' }} >
+                        <Link key={game.id} className={styles.ctaAlt} href={{ pathname: '/archive/[id]', query: { id: game.id } }} >
                             {game.id}
                         </Link>
                     ))}
