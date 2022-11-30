@@ -24,9 +24,11 @@ export default function Home() {
         gamedNb: gamedNb,
         buttons: buttons,
         value: value,
+        currentGuess: currentGuess,
         setImage: setImage,
         setGameState: setGameState,
         addButton: addButton,
+        setGuess: setGuess,
     };
 
     const setArrayLength = () => {
