@@ -9,8 +9,8 @@ import ImageButtons from '../components/imageButtons';
 const gameList = require("../public/data/games.json");
 
 export default function Home() {
-    const [gamedNb, setGamedNb] = useState(14);
-    const [gameName, setGame] = useState("Shadow Of Mordor");
+    const [gamedNb, setGamedNb] = useState(16);
+    const [gameName, setGame] = useState("Devil May Cry 5");
     const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');

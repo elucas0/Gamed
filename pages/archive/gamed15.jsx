@@ -8,14 +8,14 @@ import SearchBar from '../../components/searchBar';
 import ImageButtons from '../../components/imageButtons';
 
 export default function Home() {
-    const gamedNb = 11;
-    const [gameName, setGame] = useState("Assassin's Creed Syndicate");
+    const gamedNb = 15;
+    const [gameName, setGame] = useState("Forza Motorsport 7");
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [image, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [buttons, addButton] = useState(
         [
-            { id: 1, number: 1 },
+            { number: 1 },
         ]);
 
     const RenderAttempts = () => {
