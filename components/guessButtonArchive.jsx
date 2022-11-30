@@ -1,9 +1,9 @@
+import { useEffect } from 'react';
 import styles from '../styles/utils.module.css';
 
 export default function GuessButton({ gameName, gamedNb, buttons, value, setImage, setGameState, addButton }) {
 
     const guess = (value) => {
-        console.log(gameName);
         if (value === gameName.toLowerCase()) {
             setGameState("won");
         } else if (buttons.length <= 5) {
