@@ -3,7 +3,6 @@ import Layout, { siteTitle } from '../components/layout';
 import styles from '../styles/utils.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import GuessButton from '../components/guessButton';
 import SearchBar from '../components/searchBar';
 import ShareButton from '../components/shareButton';
 import ImageButtons from '../components/imageButtons';
@@ -11,8 +10,8 @@ const gameList = require("../public/data/games.json");
 
 export default function Home() {
     const [gamedNb, setGamedNb] = useState(14);
-    const [gameName, setGame] = useState(gameList[gamedNb - 1].game_name);
-    const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
+    const [gameName, setGame] = useState("Shadow Of Mordor");
+    const [currentImage, setImage] = useState("/images/" + gamedNb + "/01.jpg");
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
@@ -36,35 +35,69 @@ export default function Home() {
         }
     };
 
+
     useEffect(() => {
-        // If the last stored game number is different of the current one, delete the state and start a new game
         if (localStorage.getItem('gamedNb') != gamedNb) {
-            localStorage.removeItem('played');
-            localStorage.removeItem('results')
-            localStorage.setItem('gamedNb', gamedNb);
-            setImage("/images/" + gamedNb + "/01.jpg");
-            localStorage.setItem('currentImage', "1");
-            localStorage.setItem("results", "Gamed #" + gamedNb + "\n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/");
+            ResetStorageAndState();
         }
-        // If the last stored game number is the same as the current one, load the state
         if (localStorage.getItem('played')) {
-            setGameState(localStorage.getItem('gameState'));
-            setImage("/images/" + gamedNb + "/0" + localStorage.getItem("currentImage") + ".jpg");
-            // Else, start a new game
+            RestoreStorageAndState();
         } else {
-            localStorage.setItem("gamedNb", gamedNb);
-            //setImage("/images/" + gamedNb + "/0" + localStorage.getItem("currentImage") + ".jpg");
-            setGameState("playing");
-            localStorage.setItem("gameState", gameState);
+            ResumeStorageAndState();
         }
 
     });
 
+    const ResetStorageAndState = () => {
+        setImage(`/images/${gamedNb}/01.jpg`);
+        setGuess(1);
+        localStorage.removeItem('played');
+        localStorage.removeItem('results')
+        localStorage.setItem('gamedNb', gamedNb);
+        localStorage.setItem('currentImage', "1");
+        localStorage.setItem("currentGuess", 1);
+        localStorage.setItem("results", `Gamed #${gamedNb} \n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/`);
+    }
+
+    const RestoreStorageAndState = () => {
+        setGameState(localStorage.getItem('gameState'));
+        setImage(`/images/${gamedNb}/0${localStorage.getItem("currentImage")}.jpg`);
+    }
+
+    const ResumeStorageAndState = () => {
+        setGameState("playing");
+        setArrayLength();
+        setGuess(parseInt(localStorage.getItem("currentGuess")));
+        setImage(`/images/${gamedNb}/0${localStorage.getItem("currentImage")}.jpg`);
+        localStorage.setItem("gamedNb", gamedNb);
+        localStorage.setItem("gameState", gameState);
+    }
+
     const RenderAttempts = () => {
-        if (buttons.length === 6) {
-            return (<h2 className='text-xl'>1 attempt remaining</h2>);
+        if (currentGuess === 6) {
+            return (<h2 className='text-xl'>1 essai restant</h2>);
         }
         return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
+    }
+
+    const guess = (value) => {
+        let results = localStorage.getItem('results');
+        if (value === gameName.toLowerCase()) {
+            localStorage.setItem("results", results.replace("⬛", "🟨"));
+            setGameState("won");
+            localStorage.setItem('gameState', "won");
+        } else if (buttons.length <= 5) {
+            addButton([...buttons, { number: buttons.length + 1 }]);
+            setImage(`/images/${gamedNb}/0${buttons.length + 1}.jpg`);
+            localStorage.setItem("currentImage", buttons.length + 1);
+            localStorage.setItem("results", results.replace("⬛", "🟪"));
+            localStorage.setItem("currentGuess", currentGuess + 1);
+            setGuess(currentGuess + 1);
+        } else {
+            localStorage.setItem("results", results.replace("⬛", "🟪"));
+            setGameState("lost");
+            localStorage.setItem('gameState', "lost");
+        }
     }
 
     return (
@@ -90,12 +123,12 @@ export default function Home() {
                 </div>
                 {gameState == 'lost' &&
                     <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>Better luck tomorrow, it was {gameName}</h2>
+                        <h2 className='text-xl'>Dommage, c'était {gameName}</h2>
                     </div>
                 }
                 {gameState == 'won' &&
                     <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>GG, you have found {gameName}</h2>
+                        <h2 className='text-xl'>GG tu as deviné {gameName}</h2>
                     </div>
                 }
                 {gameState != "playing"

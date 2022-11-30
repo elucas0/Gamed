@@ -17,10 +17,8 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
             </Head>
             <header className="mb-6 flex items-center justify-between sm:w-full">
-                <div>
-                    <div className="-skew-x-12 px-3 text-3xl bg-purple ">
-                        <Link href="/">{name}</Link>
-                    </div>
+                <div className="-skew-x-12 ">
+                    <Link className="px-3 text-3xl bg-purple" href="/">{name}</Link>
                 </div>
                 <div className="flex space-x-3">
                     <Link href={"archive"}>

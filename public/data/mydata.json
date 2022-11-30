@@ -434,6 +434,49 @@
     {
         "game_name": "Battlefield Hardline",
         "number": 1
+    },
+    {
+        "game_name": "No Man's Sky",
+        "number": 1
+    },
+    {
+        "game_name": "Mad Max",
+        "number": 1
+    },
+    {
+        "game_name": "Fable 3",
+        "number": 1
+    },
+    {
+        "game_name": "Star Citizen",
+        "number": 1
+    },
+    {
+        "game_name": "Halo 5 Guardians",
+        "number": 1
+    },
+    {
+        "game_name": "Destiny 2",
+        "number": 1
+    },
+    {
+        "game_name": "Destiny",
+        "number": 1
+    },
+    {
+        "game_name": "Portal 2",
+        "number": 1   
+    },
+    {
+        "game_name": "World Of Warcraft",
+        "number": 1
+    },
+    {
+        "game_name": "Torchlight 2",
+        "number": 1
+    },
+    {
+        "game_name": "Orcs Must Die 3",
+        "number": 1
     }
-
 ]

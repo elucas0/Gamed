@@ -11,7 +11,7 @@ export default function ShareButton({ buttons, addButton }) {
         localStorage.setItem('played', true);
         localStorage.setItem('currentImage', localStorage.getItem('currentImage'));
         for (let i = buttons.length; i < 6; i++) {
-            addButton((buttons) => [...buttons, { id: i + 1, number: i + 1 }]);
+            addButton((buttons) => [...buttons, { number: i + 1 }]);
         }
         setCopyText(localStorage.getItem('results'));
     });
