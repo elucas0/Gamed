@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
 import Layout from "../components/layout";
 import styles from "../styles/utils.module.css";
+import React from "react";
+import Link from "next/link";
 
-export default function FirstPost() {
+export default function Archive() {
+    const gamesArchive = require("../public/data/archive.json");
     return (
         <Layout>
             <Head>
@@ -61,8 +63,7 @@ export default function FirstPost() {
                         16
                     </Link>
                 </div>
-
             </div>
-        </Layout>
+        </Layout >
     );
 }
