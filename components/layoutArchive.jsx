@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 const name = "Gamed";
-export const siteTitle = "Gamed - Daily videogame guessing game";
+export const siteTitle = "Gamed Archive - Day";
 
 export default function Layout({ children, home }) {
     return (
@@ -18,18 +18,12 @@ export default function Layout({ children, home }) {
             </Head>
             <header className="mb-6 flex items-center justify-between sm:w-full">
                 <div>
-                    <div className="-skew-x-12 px-3 text-3xl bg-purple ">
-                        <Link href="/">{name}</Link>
+                    <div className="-skew-x-12">
+                        <Link className="px-3 text-3xl bg-purple" href="/">{name}</Link>
+                        <Link className="px-3 text-3xl bg-yellow text-black" href="/archive">Archive</Link>
                     </div>
                 </div>
                 <div className="flex space-x-3">
-                    <Link href={"../archive"}>
-                        <div className="p-2.5 bg-purple ">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                    </Link>
                     <Link href={"../stats"}>
                         <div className="p-2.5 bg-purple ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">

@@ -5,15 +5,43 @@ import Image from 'next/image';
 import { useState } from 'react';
 import GuessButton from 'components/guessButtonArchive';
 import SearchBar from 'components/searchBar';
-import ImageButtons from 'components/imageButtons';
 import { useRouter } from 'next/router'
 
 const gamesArchive = require("../../public/data/archive.json");
 
+export const getStaticPaths = async () => {
+    const res = await fetch('../../public/data/archive.json');
+    const data = await res.json();
+
+    const paths = data.map(game => {
+        return {
+            params: { id: game.id.toString() }
+        }
+    })
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export const getStaticProps = async (context) => {
+    const id = context.params.id;
+    const res = await fetch('../../public/data/archive.json');
+    const data = await res.json();
+
+    const game = data.find(game => game.id === id);
+
+    return {
+        props: { game }
+    }
+}
+
 export default function ArchiveEntry() {
     const router = useRouter();
     const gamedNb = router.query.id;
-    const gameName = gamesArchive[gamedNb - 1].game_name;
+    //const gameName = gamesArchive[gamedNb - 1].game_name;
+    const gameName = "The Witcher 3";
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [image, setImage] = useState(`/images/${gamedNb}/01.jpg`);
@@ -41,7 +69,7 @@ export default function ArchiveEntry() {
     return (
         <Layout home>
             <Head>
-                <title>{siteTitle}</title>
+                <title>{siteTitle + gamedNb}</title>
             </Head>
             <div>
                 <div className={styles.image}>
