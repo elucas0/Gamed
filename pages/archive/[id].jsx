@@ -10,6 +10,34 @@ import { useEffect } from "react";
 
 const gamesArchive = require("../../public/data/archive.json");
 
+export const getStaticPaths = async () => {
+    const res = await fetch('../../public/data/archive.json');
+    const data = await res.json();
+
+    const paths = data.map(game => {
+        return {
+            params: { id: game.id.toString() }
+        }
+    })
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export const getStaticProps = async (context) => {
+    const id = context.params.id;
+    const res = await fetch('../../public/data/archive.json');
+    const data = await res.json();
+
+    const game = data.find(game => game.id === id);
+
+    return {
+        props: { game }
+    }
+}
+
 export default function ArchiveEntry() {
     const router = useRouter();
     if (router.isFallback) {

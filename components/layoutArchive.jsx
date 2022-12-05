@@ -19,8 +19,8 @@ export default function Layout({ children, home }) {
             <header className="mb-4 flex items-center justify-between sm:w-full">
                 <div>
                     <div className="-skew-x-12">
-                        <Link className="px-3 text-2xl bg-purple hover:shadow-solid-yellow duration-500" href="/">{name}</Link>
-                        <Link className="px-3 text-2xl bg-yellow text-black hover:shadow-[5px_5px_0_#6225E6] duration-500" href="/archive">Archive</Link>
+                        <Link className="px-3 text-3xl bg-purple" href="/">{name}</Link>
+                        <Link className="px-3 text-3xl bg-yellow text-black" href="/archive">Archive</Link>
                     </div>
                 </div>
                 <div className="flex space-x-3">
