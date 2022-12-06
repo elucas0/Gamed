@@ -82,26 +82,6 @@ export default function Home() {
         return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
     }
 
-    const guess = (value) => {
-        let results = localStorage.getItem('results');
-        if (value === gameName.toLowerCase()) {
-            localStorage.setItem("results", results.replace("⬛", "🟨"));
-            setGameState("won");
-            localStorage.setItem('gameState', "won");
-        } else if (buttons.length <= 5) {
-            addButton([...buttons, { number: buttons.length + 1 }]);
-            setImage(`/images/${gamedNb}/0${buttons.length + 1}.jpg`);
-            localStorage.setItem("currentImage", buttons.length + 1);
-            localStorage.setItem("results", results.replace("⬛", "🟪"));
-            localStorage.setItem("currentGuess", currentGuess + 1);
-            setGuess(currentGuess + 1);
-        } else {
-            localStorage.setItem("results", results.replace("⬛", "🟪"));
-            setGameState("lost");
-            localStorage.setItem('gameState', "lost");
-        }
-    }
-
     return (
         <Layout home>
             <Head>

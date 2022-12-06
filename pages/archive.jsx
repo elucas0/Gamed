@@ -14,7 +14,8 @@ export default function Archive() {
             <h1 className="text-3xl text-center">Archive</h1>
             <div className="flex flex-col">
                 <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
-                    <Link className={styles.ctaAlt} href={"archive/gamed1"}>
+                    <p >Archive en maintenance...</p>
+                    {/* <Link className={styles.ctaAlt} href={"archive/gamed1"}>
                         1
                     </Link>
                     <Link className={styles.ctaAlt} href={"archive/gamed2"}>
@@ -61,7 +62,7 @@ export default function Archive() {
                     </Link>
                     <Link className={styles.ctaAlt} href={"archive/gamed16"}>
                         16
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </Layout >
