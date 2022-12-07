@@ -40,7 +40,7 @@ export default function SearchBar({ setValue, value }) {
                     type="text"
                     value={value}
                     onChange={onChange}
-                    placeholder="Search for game or skip"
+                    placeholder="Rechercher un jeu"
                     className="text-black border-solid border-4 border-yellow p-2 m-1 font-poppinslight w-9/12 transition ease-in-out focus:border-purple focus:outline-none focus:-skew-x-12" />
             </div>
         </>
