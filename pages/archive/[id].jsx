@@ -7,7 +7,6 @@ import GuessButton from 'components/guessButtonArchive';
 import SearchBar from 'components/searchBar';
 import { useRouter } from 'next/router'
 import { useEffect } from 'react';
-const uri = process.env.MONGODB_URI;
 
 const gamesArchive = require("../../public/data/archive.json");
 
