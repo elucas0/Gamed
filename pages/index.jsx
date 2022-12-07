@@ -15,10 +15,7 @@ export default function Home() {
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
-    const [buttons, addButton] = useState(
-        [
-            { number: 1 },
-        ]);
+    const [buttons, addButton] = useState([{ number: 1 },]);
     const guessData = {
         gameName: gameName,
         gamedNb: gamedNb,
@@ -47,7 +44,6 @@ export default function Home() {
         } else {
             ResumeStorageAndState();
         }
-
     });
 
     const ResetStorageAndState = () => {
@@ -81,7 +77,6 @@ export default function Home() {
         }
         return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
     }
-
     return (
         <Layout home>
             <Head>

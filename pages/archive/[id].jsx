@@ -12,14 +12,14 @@ const gamesArchive = require("../../public/data/archive.json");
 
 export default function ArchiveEntry() {
     const router = useRouter();
+    if (router.isFallback) {
+        return <h1>Loading...</h1>
+    }
     const gamedNb = router.query.id;
-    console.log(gamedNb);
-    const gameName = "Death Stranding";
-    //const gameName = gamesArchive[gamedNb - 1].game_name;
+    const [gameName, setGameName] = useState('');
     const [value, setValue] = useState('');
-    const [gameState, setGameState] = useState("playing");
-    // const [image, setImage] = useState(`/images/${gamedNb}/01.jpg`);
-    const [image, setImage] = useState(`/images/1/01.jpg`);
+    const [gameState, setGameState] = useState('playing');
+    const [image, setImage] = useState('/mock_image.jpg');
     const [buttons, addButton] = useState(
         [
             { number: 1 },
@@ -34,6 +34,13 @@ export default function ArchiveEntry() {
         addButton: addButton,
     };
 
+    useEffect(() => {
+        if (router.isReady) {
+            setImage(`/images/${gamedNb}/01.jpg`);
+            setGameName(gamesArchive[gamedNb - 1].game_name);
+        }
+    }, [router.isReady]);
+
     const RenderAttempts = () => {
         if (buttons.length === 6) {
             return (<h2 className='text-xl'>1 essai restant</h2>);
@@ -44,7 +51,7 @@ export default function ArchiveEntry() {
     return (
         <Layout home>
             <Head>
-                <title>{siteTitle}</title>
+                <title>{siteTitle + ' ' + gamedNb}</title>
             </Head>
             <div>
                 <div className={styles.image}>
@@ -97,26 +104,3 @@ export default function ArchiveEntry() {
         </Layout >
     );
 };
-
-function getServersideProps(context) {
-    console.log("context", context);
-    return {
-        props: {
-            gamesArchive,
-        },
-    };
-}
-
-function getStaticPaths() {
-    const paths = gamesArchive.map((game) => {
-        return {
-            params: {
-                id: game.id.toString(),
-            },
-        };
-    });
-    return {
-        paths,
-        fallback: false,
-    };
-}
