@@ -132,3 +132,26 @@ export default function ArchiveEntry() {
         </Layout >
     );
 };
+
+function getServersideProps(context) {
+    console.log("context", context);
+    return {
+        props: {
+            gamesArchive,
+        },
+    };
+}
+
+function getStaticPaths() {
+    const paths = gamesArchive.map((game) => {
+        return {
+            params: {
+                id: game.id.toString(),
+            },
+        };
+    });
+    return {
+        paths,
+        fallback: false,
+    };
+}

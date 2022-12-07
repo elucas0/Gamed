@@ -10,7 +10,7 @@ export default function FirstPost() {
             <h1 className="text-3xl text-center">
                 Your statistics
             </h1>
-            <p >Work in progress...</p>
+            <p >À venir...</p>
         </Layout>
     );
 }
