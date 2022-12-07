@@ -28,11 +28,11 @@ export default function ShareButton({ buttons, addButton }) {
     return (
         <>
             <div className="fixed top-0 w-full left-0 right-0 text-center bg-purple overflow-hidden">
-                <div className={isActive ? styles.active : styles.hidden}>Copied to clipboard : {notifyText} </div>
+                <div className={isActive ? styles.active : styles.hidden}>Copié dans le presse-papier : {notifyText} </div>
             </div>
             <div className="flex justify-center items-center">
                 <a className={styles.cta} onClick={copyToClipboard}>
-                    <span className={styles.span}>SHARE</span>
+                    <span className={styles.span}>PARTAGER</span>
                 </a>
             </div>
         </>
