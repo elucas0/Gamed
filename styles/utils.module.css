@@ -31,7 +31,6 @@
     padding: 5px 20px;
     font-size: 2em;
     font-style: italic;
-    color: white;
     background: #6225E6;
     transition: 1s;
     box-shadow: 6px 6px 0 black;
@@ -45,7 +44,6 @@
 
     display: flex;
     font-size: 2em;
-    color: white;
     background: #6225E6;
     transition: 1s;
     box-shadow: 6px 6px 0 black;

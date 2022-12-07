@@ -20,10 +20,7 @@ export default function ArchiveEntry() {
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState('playing');
     const [image, setImage] = useState('/mock_image.jpg');
-    const [buttons, addButton] = useState(
-        [
-            { number: 1 },
-        ]);
+    const [buttons, addButton] = useState([{ number: 1 },]);
     const guessData = {
         gameName: gameName,
         gamedNb: gamedNb,
@@ -35,10 +32,7 @@ export default function ArchiveEntry() {
     };
 
     useEffect(() => {
-        if (router.isReady) {
-            setImage(`/images/${gamedNb}/01.jpg`);
-            setGameName(gamesArchive[gamedNb - 1].game_name);
-        }
+        router.isReady ? setImage(`/images/${gamedNb}/01.jpg`) + setGameName(gamesArchive[gamedNb - 1].game_name) : null;
     }, [router.isReady]);
 
     const RenderAttempts = () => {

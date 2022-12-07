@@ -31,8 +31,8 @@ export default function FirstPost() {
                     and the concept introduced by <a className="text-yellow" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>.
                 </p> */}
                 <p>Gamed est un jeux de devinette actualisé quotidiennement et destiné aux joueurs occasionnels et fréquents. Le principe est inspiré de
-                    <a className="text-yellow" href="https://framed.wtf/">Framed </a>et du concept introduit par
-                    <a className="text-yellow" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>.
+                    <a className="text-yellow" href="https://framed.wtf/"> Framed </a>et du concept introduit par
+                    <a className="text-yellow" href="https://www.nytimes.com/games/wordle/index.html"> Wordle</a>.
                 </p>
                 {/* <p>All rights go to the rightful owners - no copyright infringement intended.</p> */}
                 {/* <p>Contact me on Discord : elouann#9933</p> */}
