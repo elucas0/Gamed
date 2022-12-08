@@ -7,7 +7,7 @@ export const siteTitle = "Gamed Archive - Day";
 
 export default function Layout({ children, home }) {
     return (
-        <div className="m-auto-center p-3 max-w-2xl">
+        <div className="my-2 mx-auto p-4 max-w-2xl">
             <Head>
                 <link rel="icon" href="/gamedicon.ico" />
                 <meta
@@ -16,16 +16,16 @@ export default function Layout({ children, home }) {
                 />
                 <meta name="og:title" content={siteTitle} />
             </Head>
-            <header className="mb-6 flex items-center justify-between sm:w-full">
+            <header className="mb-4 flex items-center justify-between sm:w-full">
                 <div>
                     <div className="-skew-x-12">
-                        <Link className="px-3 text-3xl bg-purple" href="/">{name}</Link>
-                        <Link className="px-3 text-3xl bg-yellow text-black" href="/archive">Archive</Link>
+                        <Link className="px-3 text-2xl bg-purple" href="/">{name}</Link>
+                        <Link className="px-3 text-2xl bg-yellow text-black" href="/archive">Archive</Link>
                     </div>
                 </div>
                 <div className="flex space-x-3">
                     <Link href={"../stats"}>
-                        <div className="p-2.5 bg-purple ">
+                        <div className="p-1.5 bg-purple ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
                         </div>
                     </Link>
                     <Link href={"../about"}>
-                        <div className="p-2.5 bg-purple ">
+                        <div className="p-1.5 bg-purple ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                             </svg>
