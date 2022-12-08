@@ -113,7 +113,7 @@ export default function Home() {
                     </div>
                 }
                 {gameState != "playing"
-                    ? <ShareButton buttons={buttons} addButton={addButton} stats={stats} setStats={setStats} />
+                    ? <ShareButton buttons={buttons} addButton={addButton} />
                     : <>
                         <div className="mb-3">
                             <SearchBar setValue={setValue} value={value} />
