@@ -11,7 +11,7 @@ export default function Archive() {
             <Head>
                 <title>Gamed - Archive</title>
             </Head>
-            <h1 className="text-3xl text-center">Archive</h1>
+            <h1 className="text-2xl text-center">Archive</h1>
             <div className="flex flex-col">
                 <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
                     {gamesArchive.map((game) => (

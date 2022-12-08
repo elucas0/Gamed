@@ -27,13 +27,17 @@ export default function Home() {
         addButton: addButton,
         setGuess: setGuess,
     };
+    // const [stats, setStats] = useState({
+    //     played: 0,
+    //     won: 0,
+    //     avgGuess: 0,
+    // });
 
     const setArrayLength = () => {
         for (let i = buttons.length; i < parseInt(localStorage.getItem("currentGuess")); i++) {
             addButton((buttons) => [...buttons, { number: i + 1 }]);
         }
     };
-
 
     useEffect(() => {
         if (localStorage.getItem('gamedNb') != gamedNb) {
@@ -73,9 +77,9 @@ export default function Home() {
 
     const RenderAttempts = () => {
         if (currentGuess === 6) {
-            return (<h2 className='text-xl'>1 essai restant</h2>);
+            return (<h2 className='text-lg sm:text-xl'>1 essai restant</h2>);
         }
-        return (<h2 className='text-xl'>{7 - buttons.length} essais restants</h2>);
+        return (<h2 className='text-lg sm:text-xl'>{7 - buttons.length} essais restants</h2>);
     }
     return (
         <Layout home>
@@ -95,29 +99,29 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <div className="flex justify-center mb-6 font-bold space-x-3">
+                <div className="flex justify-center mb-3 font-bold space-x-2">
                     <ImageButtons setImage={setImage} buttons={buttons} gamedNb={gamedNb} />
                 </div>
                 {gameState == 'lost' &&
-                    <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>Dommage, c'était {gameName}</h2>
+                    <div className='flex justify-center mb-3'>
+                        <h2 className='text-center text-lg'>Dommage, c'était {gameName}</h2>
                     </div>
                 }
                 {gameState == 'won' &&
-                    <div className='flex justify-center mb-6'>
-                        <h2 className='text-xl'>GG tu as deviné {gameName}</h2>
+                    <div className='flex justify-center mb-3'>
+                        <h2 className='text-center text-lg'>GG tu as deviné {gameName}</h2>
                     </div>
                 }
                 {gameState != "playing"
-                    ? <ShareButton buttons={buttons} addButton={addButton} />
+                    ? <ShareButton buttons={buttons} addButton={addButton} stats={stats} setStats={setStats} />
                     : <>
-                        <div className="mb-6">
+                        <div className="mb-3">
                             <SearchBar setValue={setValue} value={value} />
                         </div>
-                        <div className='flex justify-center mb-6'>
+                        <div className='flex justify-center mb-3'>
                             <RenderAttempts />
                         </div>
-                        <div className='flex justify-center items-center mb-6'>
+                        <div className='flex justify-center items-center mb-3'>
                             <GuessButton {...guessData}></GuessButton>
                         </div>
                     </>

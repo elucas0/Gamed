@@ -23,7 +23,7 @@ export default function FirstPost() {
             <Head>
                 <title>Gamed - À propos</title>
             </Head>
-            <h1 className="text-3xl text-center mb-6">
+            <h1 className="text-2xl text-center mb-6">
                 À propos
             </h1>
             <div className="flex flex-col gap-5">

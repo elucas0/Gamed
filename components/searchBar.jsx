@@ -12,7 +12,7 @@ export default function SearchBar({ setValue, value }) {
     return (
         <>
             <div className="relative">
-                <ul className="absolute left-20 w-9/12 overflow-y-auto bottom-full max-h-36 bg-black border-solid border-2 border-purple empty:border-none ">
+                <ul className="absolute left-20 w-7/12 overflow-y-auto bottom-full max-h-36 bg-black border-solid border-2 border-purple empty:border-none ">
                     {gameList
                         .filter((item) => {
                             const searchTerm = value.toLowerCase();
@@ -27,7 +27,7 @@ export default function SearchBar({ setValue, value }) {
                         .map((item) => (
                             <li
                                 onClick={() => onSearch(item.game_name)}
-                                className="cursor-pointer text-start p-2 hover:bg-purple font-poppinslight transition ease-in-out hover:font-bold"
+                                className="cursor-pointer text-start p-1.5 hover:bg-purple font-poppinslight transition ease-in-out hover:font-bold"
                                 key={item.game_name}
                             >
                                 {item.game_name}
@@ -41,7 +41,7 @@ export default function SearchBar({ setValue, value }) {
                     value={value}
                     onChange={onChange}
                     placeholder="Rechercher un jeu"
-                    className="text-black border-solid border-4 border-yellow p-2 m-1 font-poppinslight w-9/12 transition ease-in-out focus:border-purple focus:outline-none focus:-skew-x-12" />
+                    className="text-black border-solid border-4 border-yellow p-1 font-poppinslight w-9/12 sm:w-7/12 transition ease-in-out focus:border-purple focus:outline-none focus:-skew-x-12" />
             </div>
         </>
     );
