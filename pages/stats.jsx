@@ -5,10 +5,10 @@ export default function FirstPost() {
     return (
         <Layout>
             <Head>
-                <title>Gamed - Statistics</title>
+                <title>Gamed - Statistiques</title>
             </Head>
-            <h1 className="text-3xl text-center">
-                Your statistics
+            <h1 className="text-2xl text-center">
+                Statistiques
             </h1>
             <p >À venir...</p>
         </Layout>

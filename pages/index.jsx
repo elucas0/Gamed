@@ -89,12 +89,12 @@ export default function Home() {
             <div className='mb-6'>
                 <div className={styles.image}>
                     <Image
-                        priority
                         src={currentImage}
+                        alt="Gamed Image"
                         height={720}
                         width={1280}
-                        alt=""
-                        quality={75}
+                        priority
+
                     />
                 </div>
             </div>
