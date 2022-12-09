@@ -11,9 +11,15 @@ module.exports = {
                 poppins: ["Poppins", "sans-serif"],
                 poppinslight: ["PoppinsLight", "sans-serif"],
             },
+            margin: {
+                "auto-center": "3rem auto 6rem",
+            },
             colors: {
                 purple: "#6225E6",
                 yellow: "#FBC638",
+            },
+            boxShadow: {
+                "solid-yellow": "5px 5px 0px #FBC638",
             },
         },
     },
