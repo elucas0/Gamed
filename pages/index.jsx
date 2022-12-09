@@ -93,8 +93,8 @@ export default function Home() {
                         alt="Gamed Image"
                         height={720}
                         width={1280}
-                        priority
-
+                        priority={true}
+                        quality={100}
                     />
                 </div>
             </div>

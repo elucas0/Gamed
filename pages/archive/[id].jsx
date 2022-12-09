@@ -52,16 +52,15 @@ export default function ArchiveEntry() {
             <Head>
                 <title>{siteTitle + " " + gamedNb}</title>
             </Head>
-            <div>
+            <div className="mb-6">
                 <div className={styles.image}>
                     <Image
-                        className="mb-6"
-                        priority
                         src={image}
+                        alt="Gamed Image"
                         height={720}
                         width={1280}
-                        alt=""
-                        quality={75}
+                        priority={true}
+                        quality={100}
                     />
                 </div>
             </div>
