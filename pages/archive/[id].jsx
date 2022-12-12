@@ -19,7 +19,7 @@ export default function ArchiveEntry() {
     const [gameName, setGameName] = useState("");
     const [value, setValue] = useState("");
     const [gameState, setGameState] = useState("playing");
-    const [image, setImage] = useState("/mock_image.jpg");
+    const [image, setImage] = useState("/images/mock_image.jpg");
     const [buttons, addButton] = useState([{ number: 1 }]);
     const guessData = {
         gameName: gameName,

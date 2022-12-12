@@ -1,5 +1,6 @@
-.image {
+.frame {
     animation: border_color_anim 30s infinite;
+    margin-bottom: 1.5em;
 }
 
 @keyframes border_color_anim {

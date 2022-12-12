@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 html {
-    background-image: url("../public/images/ooorganize.svg");
+    background-image: url("../public/images/bg.svg");
     background-color: black;
+    background-position: center;
     color:white;
     font-family: "Poppins", sans-serif;
 }

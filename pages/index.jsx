@@ -86,24 +86,23 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className='mb-6'>
-                <div className={styles.image}>
-                    <Image
-                        src={currentImage}
-                        alt="Gamed Image"
-                        height={720}
-                        width={1280}
-                        priority
-
-                    />
-                </div>
+            <div className={styles.frame}>
+                <Image
+                    src={currentImage}
+                    alt="Gamed Image"
+                    height={540}
+                    width={960}
+                    priority={true}
+                // placeholder="blur"
+                // blurDataURL=''
+                />
             </div>
             <div>
                 <div className="flex justify-center mb-3 font-bold space-x-2">
                     <ImageButtons setImage={setImage} buttons={buttons} gamedNb={gamedNb} />
                 </div>
                 {gameState == 'lost' &&
-                    <div className='flex justify-center mb-3'>
+                    <div className='flex justify-center mb-6'>
                         <h2 className='text-center text-lg'>Dommage, c'était {gameName}</h2>
                     </div>
                 }
