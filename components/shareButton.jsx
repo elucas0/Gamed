@@ -2,12 +2,23 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ buttons, addButton, stats, setStats }) {
+export default function ShareButton({ buttons, addButton, stats, setStats, currentGuess }) {
     const [copyText, setCopyText] = useState();
     const [isActive, setIsActive] = useState();
     const [notifyText, setNotifyText] = useState();
+    const [points, setPoints] = useState(0);
+
+    setPoints()
 
     useEffect(() => {
+        if (localStorage.getItem("saved") == null) {
+            localStorage.setItem("saved", true);
+            localStorage.setItem("points", 0);
+            setPoints(localStorage.getItem("points"));
+        } else {
+            setPoints(localStorage.getItem("points"));
+        }
+
         localStorage.setItem('played', true);
         localStorage.setItem('currentImage', localStorage.getItem('currentImage'));
         for (let i = buttons.length; i < 6; i++) {

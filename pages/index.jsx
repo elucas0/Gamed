@@ -9,8 +9,9 @@ import ImageButtons from '../components/imageButtons';
 import GuessButton from '../components/guessButton';
 
 export default function Home() {
-    const gamedNb = 17;
-    const gameName = "Kingdom Come Deliverance";
+    const gamedNb = 20;
+    const gameName = "Assassin's Creed Origins";
+    const [points, setPoints] = useState(0);
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
@@ -43,12 +44,14 @@ export default function Home() {
         if (localStorage.getItem('gamedNb') != gamedNb) {
             ResetStorageAndState();
         }
-        if (localStorage.getItem('played')) {
-            RestoreStorageAndState();
-        } else {
-            ResumeStorageAndState();
+    }, [gamedNb]);
+
+    useEffect(() => {
+        if (localStorage.getItem('gamedNb') == null) {
+            localStorage.setItem('points', 0);
         }
-    });
+        localStorage.getItem('played') ? RestoreStorageAndState() : ResumeStorageAndState();
+    }, []);
 
     const ResetStorageAndState = () => {
         setImage(`/images/${gamedNb}/01.jpg`);
@@ -112,8 +115,7 @@ export default function Home() {
                     </div>
                 }
                 {gameState != "playing"
-                    // ? <ShareButton buttons={buttons} addButton={addButton} stats={stats} setStats={setStats} />
-                    ? <ShareButton buttons={buttons} addButton={addButton} />
+                    ? <ShareButton buttons={buttons} addButton={addButton} currentGuess={currentGuess} />
                     : <>
                         <div className="mb-3">
                             <SearchBar setValue={setValue} value={value} />

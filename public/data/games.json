@@ -1,362 +1,722 @@
 [
     {
-        "game_name": "Anthem"
+        "game_name": "Anthem",
+        "genre": "Action RPG",
+        "year": "2019",
+        "developer": "BioWare"
     },
     {
-        "game_name": "Assassin's Creed"
+        "game_name": "Assassin's Creed",
+        "genre": "Action-Adventure",
+        "year": "2007",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Brotherhood"
+        "game_name": "Assassin's Creed Brotherhood",
+        "genre": "Action-Adventure",
+        "year": "2010",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed II"
+        "game_name": "Assassin's Creed II",
+        "genre": "Action-Adventure",
+        "year": "2009",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed III"
+        "game_name": "Assassin's Creed III",
+        "genre": "Action-Adventure",
+        "year": "2012",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed IV Black Flag"
+        "game_name": "Assassin's Creed IV Black Flag",
+        "genre": "Action-Adventure",
+        "year": "2013",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Odyssey"
+        "game_name": "Assassin's Creed Odyssey",
+        "genre": "Action RPG",
+        "year": "2018",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Origins"
+        "game_name": "Assassin's Creed Origins",
+        "genre": "Action RPG",
+        "year": "2017",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Revelations"
+        "game_name": "Assassin's Creed Revelations",
+        "genre": "Action-Adventure",
+        "year": "2011",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Rogue"
+        "game_name": "Assassin's Creed Rogue",
+        "genre": "Action-Adventure",
+        "year": "2014",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Syndicate"
+        "game_name": "Assassin's Creed Syndicate",
+        "genre": "Action-Adventure",
+        "year": "2015",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Unity"
+        "game_name": "Assassin's Creed Unity",
+        "genre": "Action-Adventure",
+        "year": "2014",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Assassin's Creed Valhalla"
+        "game_name": "Assassin's Creed Valhalla",
+        "genre": "Action RPG",
+        "year": "2020",
+        "developer": "Ubisoft"
     },
     {
-        "game_name": "Battlefield 2042"
+        "game_name": "Battlefield 2042",
+        "genre": "FPS",
+        "year": "2021",
+        "developer": "EA DICE"
     },
     {
-        "game_name": "Battlefield 99"
+        "game_name": "Battlefield 1",
+        "genre": "FPS",
+        "year": "2016",
+        "developer": "EA DICE"
     },
     {
-        "game_name": "Battlefield Hardline"
+        "game_name": "Battlefield Hardline",
+        "genre": "FPS",
+        "year": "2015",
+        "developer": "EA Visceral Games"
     },
     {
-        "game_name": "Battlefield V"
+        "game_name": "Battlefield V",
+        "genre": "FPS",
+        "year": "2018",
+        "developer": "EA DICE"
     },
     {
-        "game_name": "Bloodborne"
+        "game_name": "Bloodborne",
+        "genre": "Action RPG",
+        "year": "2015",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Borderlands"
+        "game_name": "Borderlands",
+        "genre": "FPS RPG",
+        "year": "2009",
+        "developer": "Gearbox Software"
     },
     {
-        "game_name": "Borderlands 2"
+        "game_name": "Borderlands 2",
+        "genre": "FPS RPG",
+        "year": "2012",
+        "developer": "Gearbox Software"
     },
     {
-        "game_name": "Borderlands 3"
+        "game_name": "Borderlands 3",
+        "genre": "FPS RPG",
+        "year": "2019",
+        "developer": "Gearbox Software"
     },
     {
-        "game_name": "Borderlands Pre-Sequel"
+        "game_name": "Borderlands Pre-Sequel",
+        "genre": "FPS RPG",
+        "year": "2014",
+        "developer": "Gearbox Software"
     },
     {
-        "game_name": "Call Of Duty Advanced Warfare"
+        "game_name": "Call Of Duty Advanced Warfare",
+        "genre": "FPS",
+        "year": "2014",
+        "developer": "Activision Sledgehammer Games"
     },
     {
-        "game_name": "Call Of Duty Black Ops"
+        "game_name": "Call Of Duty Black Ops",
+        "genre": "FPS",
+        "year": "2010",
+        "developer": "Activision Treyarch"
     },
     {
-        "game_name": "Call Of Duty Black Ops 2"
+        "game_name": "Call Of Duty Black Ops 2",
+        "genre": "FPS",
+        "year": "2012",
+        "developer": "Activision Treyarch"
     },
     {
-        "game_name": "Call Of Duty Black Ops 3"
+        "game_name": "Call Of Duty Black Ops 3",
+        "genre": "FPS",
+        "year": "2015",
+        "developer": "Activision Treyarch"
     },
     {
-        "game_name": "Call Of Duty Black Ops 4"
+        "game_name": "Call Of Duty Black Ops 4",
+        "genre": "FPS",
+        "year": "2018",
+        "developer": "Activision Treyarch"
     },
     {
-        "game_name": "Call Of Duty Ghosts"
+        "game_name": "Call Of Duty Ghosts",
+        "genre": "FPS",
+        "year": "2013",
+        "developer": "Activision Infinity Ward"
     },
     {
-        "game_name": "Call Of Duty Infinite Warfare"
+        "game_name": "Call Of Duty Infinite Warfare",
+        "genre": "FPS",
+        "year": "2016",
+        "developer": "Activision Infinity Ward"
     },
     {
-        "game_name": "Call Of Duty Modern Warfare"
+        "game_name": "Call Of Duty Modern Warfare",
+        "genre": "FPS",
+        "year": "2019",
+        "developer": "Activision Infinity Ward"
     },
     {
-        "game_name": "Call Of Duty Modern Warfare 2"
+        "game_name": "Call Of Duty Modern Warfare 2",
+        "genre": "FPS",
+        "year": "2009",
+        "developer": "Activision Infinity Ward"
     },
     {
-        "game_name": "Call Of Duty Modern Warfare 3"
+        "game_name": "Call Of Duty Modern Warfare 3",
+        "genre": "FPS",
+        "year": "2011",
+        "developer": "Activision Infinity Ward"
     },
     {
-        "game_name": "Call Of Duty WWII"
+        "game_name": "Call Of Duty WWII",
+        "genre": "FPS",
+        "year": "2017",
+        "developer": "Activision Sledgehammer Games"
     },
     {
-        "game_name": "Control"
+        "game_name": "Control",
+        "genre": "Action-Adventure",
+        "year": "2019",
+        "developer": "Remedy Entertainment"
     },
     {
-        "game_name": "Cyberpunk 2077"
+        "game_name": "Cyberpunk 2077",
+        "genre": "Action RPG FPS ",
+        "year": "2020",
+        "developer": "CD Projekt Red"
     },
     {
-        "game_name": "Dark Souls"
+        "game_name": "Dark Souls",
+        "genre": "Action RPG",
+        "year": "2011",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Dark Souls 2"
+        "game_name": "Dark Souls 2",
+        "genre": "Action RPG",
+        "year": "2014",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Dark Souls 3"
+        "game_name": "Dark Souls 3",
+        "genre": "Action RPG",
+        "year": "2016",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Days Gone"
+        "game_name": "Days Gone",
+        "genre": "Action-Adventure",
+        "year": "2019",
+        "developer": "Sony Bend Studio"
     },
     {
-        "game_name": "Death Stranding"
+        "game_name": "Death Stranding",
+        "genre": "Action-Adventure",
+        "year": "2019",
+        "developer": "Kojima Productions"
     },
     {
-        "game_name": "Demon's Souls"
+        "game_name": "Demon's Souls",
+        "genre": "Action RPG",
+        "year": "2009",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Destiny"
+        "game_name": "Destiny",
+        "genre": "FPS RPG",
+        "year": "2014",
+        "developer": "Bungie"
     },
     {
-        "game_name": "Destiny 2"
+        "game_name": "Destiny 2",
+        "genre": "FPS RPG",
+        "year": "2017",
+        "developer": "Bungie"
     },
     {
-        "game_name": "Devil May Cry 5"
+        "game_name": "Devil May Cry 5",
+        "genre": "Hack and Slash",
+        "year": "2019",
+        "developer": "Capcom"
     },
     {
-        "game_name": "Diablo 3"
+        "game_name": "Diablo 3",
+        "genre": "Hack and Slash",
+        "year": "2012",
+        "developer": "Blizzard Entertainment"
     },
     {
-        "game_name": "Dishonored"
+        "game_name": "Dishonored",
+        "genre": "Action-Adventure Stealth FPS",
+        "year": "2012",
+        "developer": "Arkane Studios"
     },
     {
-        "game_name": "Dishonored 2"
+        "game_name": "Dishonored 2",
+        "genre": "Action-Adventure Stealth FPS",
+        "year": "2016",
+        "developer": "Arkane Studios"
     },
     {
-        "game_name": "Dishonored Death Of The Outsider"
+        "game_name": "Dishonored Death Of The Outsider",
+        "genre": "Action-Adventure Stealth FPS",
+        "year": "2017",
+        "developer": "Arkane Studios"
     },
     {
-        "game_name": "Doom Eternal"
+        "game_name": "Doom Eternal",
+        "genre": "Fast Paced FPS",
+        "year": "2020",
+        "developer": "id Software"
     },
     {
-        "game_name": "Dying Light"
+        "game_name": "Dying Light",
+        "genre": "Action RPG FPS",
+        "year": "2015",
+        "developer": "Techland"
     },
     {
-        "game_name": "Dying Light 2"
+        "game_name": "Dying Light 2",
+        "genre": "Action RPG FPS",
+        "year": "2021",
+        "developer": "Techland"
     },
     {
-        "game_name": "Elden Ring"
+        "game_name": "Elden Ring",
+        "genre": "Action RPG",
+        "year": "2022",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Fable 3"
+        "game_name": "Fable 3",
+        "genre": "Action RPG",
+        "year": "2010",
+        "developer": "Lionhead Studios"
     },
     {
-        "game_name": "Fallout 3"
+        "game_name": "Fallout 3",
+        "genre": "Action RPG FPS",
+        "year": "2008",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "Fallout 4"
+        "game_name": "Fallout 4",
+        "genre": "Action RPG FPS",
+        "year": "2015",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "Fallout 76"
+        "game_name": "Fallout 76",
+        "genre": "Action RPG FPS",
+        "year": "2018",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "Far Cry"
+        "game_name": "Far Cry",
+        "genre": "Action FPS",
+        "year": "2004",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry 2"
+        "game_name": "Far Cry 2",
+        "genre": "Action FPS",
+        "year": "2008",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry 3"
+        "game_name": "Far Cry 3",
+        "genre": "Action FPS",
+        "year": "2012",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry 4"
+        "game_name": "Far Cry 4",
+        "genre": "Action FPS",
+        "year": "2014",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry 5"
+        "game_name": "Far Cry 5",
+        "genre": "Action FPS",
+        "year": "2018",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry 6"
+        "game_name": "Far Cry 6",
+        "genre": "Action FPS",
+        "year": "2021",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry New Dawn"
+        "game_name": "Far Cry New Dawn",
+        "genre": "Action FPS",
+        "year": "2019",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Far Cry Primal"
+        "game_name": "Far Cry Primal",
+        "genre": "Action FPS",
+        "year": "2016",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "For Honor"
+        "game_name": "For Honor",
+        "genre": "Action Beat them all",
+        "year": "2017",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Forza Horizon 3"
+        "game_name": "Forza Horizon 3",
+        "genre": "Racing",
+        "year": "2016",
+        "developer": "Playground Games"
     },
     {
-        "game_name": "Forza Horizon 4"
+        "game_name": "Forza Horizon 4",
+        "genre": "Racing",
+        "year": "2018",
+        "developer": "Playground Games"
     },
     {
-        "game_name": "Forza Horizon 5"
+        "game_name": "Forza Horizon 5",
+        "genre": "Racing",
+        "year": "2021",
+        "developer": "Playground Games"
     },
     {
-        "game_name": "Forza Motorsport 7"
+        "game_name": "Forza Motorsport 7",
+        "genre": "Racing",
+        "year": "2017",
+        "developer": "Turn 10 Studios"
     },
     {
-        "game_name": "Gears 5"
+        "game_name": "Gears 5",
+        "genre": "Tactical Shooter",
+        "year": "2019",
+        "developer": "The Coalition"
     },
     {
-        "game_name": "Gears Of War 4"
+        "game_name": "Gears Of War 4",
+        "genre": "Tactical Shooter",
+        "year": "2016",
+        "developer": "The Coalition"
     },
     {
-        "game_name": "Ghost Of Tsushima"
+        "game_name": "Ghost Of Tsushima",
+        "genre": "Action Adventure",
+        "year": "2020",
+        "developer": "Sucker Punch Productions"
     },
     {
-        "game_name": "God Of War"
+        "game_name": "God Of War",
+        "genre": "Action Adventure",
+        "year": "2018",
+        "developer": "Santa Monica Studio"
     },
     {
-        "game_name": "Halo 5 Guardians"
+        "game_name": "Halo 5 Guardians",
+        "genre": "Action FPS",
+        "year": "2015",
+        "developer": "343 Industries"
     },
     {
-        "game_name": "Halo Infinite"
+        "game_name": "Halo Infinite",
+        "genre": "Action FPS",
+        "year": "2021",
+        "developer": "343 Industries"
     },
     {
-        "game_name": "Horizon Zero Dawn"
+        "game_name": "Horizon Zero Dawn",
+        "genre": "Action RPG",
+        "year": "2017",
+        "developer": "Guerrilla Games"
     },
     {
-        "game_name": "Just Cause 3"
+        "game_name": "Just Cause 3",
+        "genre": "Action Adventure",
+        "year": "2015",
+        "developer": "Avalanche Studios"
     },
     {
-        "game_name": "Just Cause 4"
+        "game_name": "Just Cause 4",
+        "genre": "Action Adventure",
+        "year": "2018",
+        "developer": "Avalanche Studios"
     },
     {
-        "game_name": "Kingdom Come Deliverance"
+        "game_name": "Kingdom Come Deliverance",
+        "genre": "Simulation RPG",
+        "year": "2018",
+        "developer": "Warhorse Studios"
     },
     {
-        "game_name": "Mad Max"
+        "game_name": "Mad Max",
+        "genre": "Action Adventure",
+        "year": "2015",
+        "developer": "Avalanche Studios"
     },
     {
-        "game_name": "Marvel's Spider-Man"
+        "game_name": "Marvel's Spider-Man",
+        "genre": "Action Adventure",
+        "year": "2018",
+        "developer": "Sony Insomniac Games"
     },
     {
-        "game_name": "Mass Effect"
+        "game_name": "Mass Effect",
+        "genre": "Action RPG",
+        "year": "2007",
+        "developer": "BioWare"
     },
     {
-        "game_name": "Mass Effect 2"
+        "game_name": "Mass Effect 2",
+        "genre": "Action RPG",
+        "year": "2010",
+        "developer": "BioWare"
     },
     {
-        "game_name": "Mass Effect 3"
+        "game_name": "Mass Effect 3",
+        "genre": "Action RPG",
+        "year": "2012",
+        "developer": "BioWare"
     },
     {
-        "game_name": "Mass Effect Andromeda"
+        "game_name": "Mass Effect Andromeda",
+        "genre": "Action RPG",
+        "year": "2017",
+        "developer": "BioWare"
     },
     {
-        "game_name": "Metro Exodus"
+        "game_name": "Metro Exodus",
+        "genre": "Action FPS",
+        "year": "2019",
+        "developer": "4A Games"
     },
     {
-        "game_name": "Monster Hunter World"
+        "game_name": "Monster Hunter World",
+        "genre": "Action RPG",
+        "year": "2018",
+        "developer": "Capcom"
     },
     {
-        "game_name": "Mount & Blade"
+        "game_name": "Mount & Blade",
+        "genre": "Action RPG",
+        "year": "2008",
+        "developer": "TaleWorlds Entertainment"
     },
     {
-        "game_name": "Mount & Blade 2"
+        "game_name": "Mount & Blade 2",
+        "genre": "Action RPG",
+        "year": "2010",
+        "developer": "TaleWorlds Entertainment"
     },
     {
-        "game_name": "Mount & Blade Warband"
+        "game_name": "Mount & Blade Warband",
+        "genre": "Action RPG",
+        "year": "2010",
+        "developer": "TaleWorlds Entertainment"
     },
     {
-        "game_name": "No Man's Sky"
+        "game_name": "No Man's Sky",
+        "genre": "SandBox",
+        "year": "2016",
+        "developer": "Hello Games"
     },
     {
-        "game_name": "Orcs Must Die 3"
+        "game_name": "Orcs Must Die 3",
+        "genre": "Tower Defense",
+        "year": "2019",
+        "developer": "Robot Entertainment"
     },
     {
-        "game_name": "Portal 2"
+        "game_name": "Portal 2",
+        "genre": "Puzzle",
+        "year": "2011",
+        "developer": "Valve"
     },
     {
-        "game_name": "Red Dead Redemption 2"
+        "game_name": "Red Dead Redemption 2",
+        "genre": "Action Adventure",
+        "year": "2018",
+        "developer": "Rockstar Games"
     },
     {
-        "game_name": "Resident Evil 2"
+        "game_name": "Resident Evil 2",
+        "genre": "Survival Horror",
+        "year": "2019",
+        "developer": "Capcom"
     },
     {
-        "game_name": "Sekiro Shadows Die Twice"
+        "game_name": "Sekiro Shadows Die Twice",
+        "genre": "Action Adventure",
+        "year": "2019",
+        "developer": "FromSoftware"
     },
     {
-        "game_name": "Shadow Of Mordor"
+        "game_name": "Shadow Of Mordor",
+        "genre": "Action Adventure",
+        "year": "2014",
+        "developer": "Monolith Productions"
     },
     {
-        "game_name": "Shadow Of The Tomb Raider"
+        "game_name": "Shadow Of The Tomb Raider",
+        "genre": "Action Adventure",
+        "year": "2018",
+        "developer": "Eidos Montreal"
     },
     {
-        "game_name": "Shadow Of War"
+        "game_name": "Shadow Of War",
+        "genre": "Action Adventure",
+        "year": "2017",
+        "developer": "Monolith Productions"
     },
     {
-        "game_name": "Star Citizen"
+        "game_name": "Star Citizen",
+        "genre": "Space Sim",
+        "year": "2012",
+        "developer": "Cloud Imperium Games"
     },
     {
-        "game_name": "Star Wars Battlefront"
+        "game_name": "Star Wars Battlefront",
+        "genre": "Action FPS",
+        "year": "2015",
+        "developer": "EA DICE"
     },
     {
-        "game_name": "Star Wars Battlefront 2"
+        "game_name": "Star Wars Battlefront 2",
+        "genre": "Action FPS",
+        "year": "2017",
+        "developer": "EA DICE"
     },
     {
-        "game_name": "Star Wars Jedi Fallen Order"
+        "game_name": "Star Wars Jedi Fallen Order",
+        "genre": "Action Adventure",
+        "year": "2019",
+        "developer": "Respawn Entertainment"
     },
     {
-        "game_name": "Starfield"
+        "game_name": "Starfield",
+        "genre": "Action RPG",
+        "year": "2022",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "The Elder Scrolls III Morrowind"
+        "game_name": "The Elder Scrolls III Morrowind",
+        "genre": "Action RPG",
+        "year": "2002",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "The Elder Scrolls IV Oblivion"
+        "game_name": "The Elder Scrolls IV Oblivion",
+        "genre": "Action RPG",
+        "year": "2006",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "The Elder Scrolls V Skyrim"
+        "game_name": "The Elder Scrolls V Skyrim",
+        "genre": "Action RPG",
+        "year": "2011",
+        "developer": "Bethesda Game Studios"
     },
     {
-        "game_name": "The Last Guardian"
+        "game_name": "The Last Guardian",
+        "genre": "Action Adventure",
+        "year": "2016",
+        "developer": "Sony Japan Studio"
     },
     {
-        "game_name": "The Last Of Us"
+        "game_name": "The Last Of Us",
+        "genre": "Action Adventure",
+        "year": "2013",
+        "developer": "Naughty Dog"
     },
     {
-        "game_name": "The Last Of Us Part II"
+        "game_name": "The Last Of Us Part II",
+        "genre": "Action Adventure",
+        "year": "2020",
+        "developer": "Naughty Dog"
     },
     {
-        "game_name": "The Witcher"
+        "game_name": "The Witcher",
+        "genre": "Action RPG",
+        "year": "2007",
+        "developer": "CD Projekt Red"
     },
     {
-        "game_name": "The Witcher 2"
+        "game_name": "The Witcher 2",
+        "genre": "Action RPG",
+        "year": "2011",
+        "developer": "CD Projekt Red"
     },
     {
-        "game_name": "The Witcher 3"
+        "game_name": "The Witcher 3",
+        "genre": "Action RPG",
+        "year": "2015",
+        "developer": "CD Projekt Red"
     },
     {
-        "game_name": "Torchlight 2"
+        "game_name": "Torchlight 2",
+        "genre": "Action RPG",
+        "year": "2012",
+        "developer": "Runic Games"
     },
     {
-        "game_name": "Uncharted 4"
+        "game_name": "Uncharted 4",
+        "genre": "Action Adventure",
+        "year": "2016",
+        "developer": "Naughty Dog"
     },
     {
-        "game_name": "Vampyr"
+        "game_name": "Vampyr",
+        "genre": "Action RPG",
+        "year": "2018",
+        "developer": "Dontnod Entertainment"
     },
     {
-        "game_name": "Watch Dogs"
+        "game_name": "Watch Dogs",
+        "genre": "Action Adventure",
+        "year": "2014",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Watch Dogs 2"
+        "game_name": "Watch Dogs 2",
+        "genre": "Action Adventure",
+        "year": "2016",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "Watch Dogs Legion"
+        "game_name": "Watch Dogs Legion",
+        "genre": "Action Adventure",
+        "year": "2020",
+        "developer": "Ubisoft Montreal"
     },
     {
-        "game_name": "World Of Warcraft"
+        "game_name": "World Of Warcraft",
+        "genre": "MMORPG",
+        "year": "2004",
+        "developer": "Blizzard Entertainment"
     }
 ]
