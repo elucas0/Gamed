@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import styles from "../styles/utils.module.css";
 import React from "react";
 import Link from "next/link";
 

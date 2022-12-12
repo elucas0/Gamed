@@ -2,7 +2,7 @@ import styles from "../styles/utils.module.css";
 import copy from "copy-to-clipboard";
 import { useState, useEffect } from "react";
 
-export default function ShareButton({ buttons, addButton }) {
+export default function ShareButton({ buttons, addButton, stats, setStats }) {
     const [copyText, setCopyText] = useState();
     const [isActive, setIsActive] = useState();
     const [notifyText, setNotifyText] = useState();
@@ -14,6 +14,11 @@ export default function ShareButton({ buttons, addButton }) {
             addButton((buttons) => [...buttons, { number: i + 1 }]);
         }
         setCopyText(localStorage.getItem('results'));
+        // setStats({
+        //     played: parseInt(localStorage.getItem('played')),
+        //     won: parseInt(localStorage.getItem('won')),
+        //     avgGuess: parseInt(localStorage.getItem('avgGuess')),
+        // });
     });
 
     const copyToClipboard = () => {
