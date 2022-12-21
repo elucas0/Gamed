@@ -9,8 +9,8 @@ import ImageButtons from '../components/imageButtons';
 import GuessButton from '../components/guessButton';
 
 export default function Home() {
-    const gamedNb = 21;
-    const gameName = "Star Citizen";
+    const gamedNb = 22;
+    const gameName = "Far Cry 5";
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');

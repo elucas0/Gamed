@@ -26,7 +26,7 @@ for file in files:
             else:
                 img = img.crop((0, 0, width, width * 9 / 16))
         # Resize the image
-        img = img.resize((1280, 720), resample=Image.LANCZOS)
+        img = img.resize((1280, 720), resample=Image.Resampling.LANCZOS)
         # Save the image
         img.save(file)
         # Close the image
