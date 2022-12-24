@@ -11,6 +11,7 @@ files = os.listdir(cwd)
 
 # Loop through all the files in the current working directory
 for file in files:
+
     # Open the image
     if(file.endswith(".jpg")):
         img = Image.open(file)
@@ -26,7 +27,7 @@ for file in files:
             else:
                 img = img.crop((0, 0, width, width * 9 / 16))
         # Resize the image
-        img = img.resize((1280, 720), resample=Image.Resampling.LANCZOS)
+        img = img.resize((1280, 720), resample=Image.LANCZOS)
         # Save the image
         img.save(file)
         # Close the image
