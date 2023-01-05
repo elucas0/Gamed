@@ -39,16 +39,19 @@
         "game_name": "Assassin's Creed Valhalla"
     },
     {
-        "game_name": "Battlefield 2042"
+        "game_name": "Battlefield 1"
     },
     {
-        "game_name": "Battlefield 1"
+        "game_name": "Battlefield 2042"
     },
     {
         "game_name": "Battlefield Hardline"
     },
     {
         "game_name": "Battlefield V"
+    },
+    {
+        "game_name": "Beyond Two Souls"
     },
     {
         "game_name": "Bloodborne"
@@ -127,6 +130,9 @@
     },
     {
         "game_name": "Destiny 2"
+    },
+    {
+        "game_name": "Detroit Become Human"
     },
     {
         "game_name": "Devil May Cry 5"
@@ -219,10 +225,19 @@
         "game_name": "God Of War"
     },
     {
+        "game_name": "Grand Theft Auto IV"
+    },
+    {
+        "game_name": "Grand Theft Auto V"
+    },
+    {
         "game_name": "Halo 5 Guardians"
     },
     {
         "game_name": "Halo Infinite"
+    },
+    {
+        "game_name": "Heavy Rain"
     },
     {
         "game_name": "Horizon Zero Dawn"
@@ -240,7 +255,19 @@
         "game_name": "Mad Max"
     },
     {
+        "game_name": "Mafia 3"
+    },
+    {
+        "game_name": "Mafia Definitive Edition"
+    },
+    {
+        "game_name": "Marvel's Avengers"
+    },
+    {
         "game_name": "Marvel's Spider-Man"
+    },
+    {
+        "game_name": "Marvel's Spider-Man Miles Morales"
     },
     {
         "game_name": "Mass Effect"
@@ -285,6 +312,12 @@
         "game_name": "Resident Evil 2 Remake"
     },
     {
+        "game_name": "Resident Evil 7 Biohazard"
+    },
+    {
+        "game_name": "Resident Evil Village"
+    },
+    {
         "game_name": "Sekiro Shadows Die Twice"
     },
     {
@@ -309,7 +342,25 @@
         "game_name": "Star Wars Jedi Fallen Order"
     },
     {
+        "game_name": "Star Wars Squadrons"
+    },
+    {
         "game_name": "Starfield"
+    },
+    {
+        "game_name": "The Callisto Protocol"
+    },
+    {
+        "game_name": "The Dark Pictures Anthology House of Ashes"
+    },
+    {
+        "game_name": "The Dark Pictures Anthology Little Hope"
+    },
+    {
+        "game_name": "The Dark Pictures Anthology Man of Medan"
+    },
+    {
+        "game_name": "The Dark Pictures Anthology The Devil in Me"
     },
     {
         "game_name": "The Elder Scrolls III Morrowind"
@@ -345,6 +396,9 @@
         "game_name": "Uncharted 4"
     },
     {
+        "game_name": "Until Dawn"
+    },
+    {
         "game_name": "Vampyr"
     },
     {
@@ -358,57 +412,5 @@
     },
     {
         "game_name": "World Of Warcraft"
-    },
-    {
-        "game_name": "Grand Theft Auto V"
-    },
-    {
-        "game_name": "Grand Theft Auto IV"
-    },
-    {
-        "game_name": "Mafia 3"
-    },
-    {
-        "game_name": "Mafia Definitive Edition"
-    },
-    {
-        "game_name": "Marvel's Spider-Man Miles Morales"
-    },
-    {
-        "game_name": "Marvel's Avengers"
-    },
-    {
-        "game_name": "Until Dawn"
-    },
-    {
-        "game_name": "The Dark Pictures Anthology House of Ashes"
-    },
-    {
-        "game_name": "The Dark Pictures Anthology Little Hope"
-    },
-    {
-        "game_name": "The Dark Pictures Anthology Man of Medan"
-    },
-    {
-        "game_name": "The Dark Pictures Anthology The Devil in Me"
-    },
-    {
-        "game_name": "Beyond Two Souls"
-    },
-    {
-        "game_name": "Detroit Become Human"
-    },
-    {
-        "game_name": "Heavy Rain"
-    },
-    {
-        "game_name": "Resident Evil 7 Biohazard"
-    },
-    {
-        "game_name": "Resident Evil Village"
-    },
-    {
-        "game_name": "The Callisto Protocol"
     }
-
 ]
