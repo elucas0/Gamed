@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 
-const name = "Gamed";
 export const siteTitle = "Gamed Archive - Day";
 
 export default function Layout({ children, home }) {
@@ -16,14 +15,20 @@ export default function Layout({ children, home }) {
                 />
                 <meta name="og:title" content={siteTitle} />
             </Head>
-            <header className="mb-4 flex items-center justify-between sm:w-full">
+            <header className="flex items-center justify-between sm:w-full">
                 <div>
                     <div className="-skew-x-12">
-                        <Link className="px-3 text-2xl bg-purple hover:shadow-solid-yellow duration-500" href="/">{name}</Link>
-                        <Link className="px-3 text-2xl bg-yellow text-black hover:shadow-[5px_5px_0_#6225E6] duration-500" href="/archive">Archive</Link>
+                        <Link className="px-3 text-2xl bg-purple hover:shadow-solid-yellow duration-500" href="/">Gamed</Link>
                     </div>
                 </div>
                 <div className="flex space-x-3">
+                    <Link href={"./"}>
+                        <div className="p-1.5 bg-purple hover:shadow-solid-yellow duration-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">                                
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </Link>
                     <Link href={"../stats"}>
                         <div className="p-1.5 bg-purple hover:shadow-solid-yellow duration-500">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">

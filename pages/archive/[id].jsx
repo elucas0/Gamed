@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout, { siteTitle } from "../../components/layoutArchive";
 import styles from "../../styles/utils.module.css";
 import Image from "next/image";
@@ -52,6 +53,9 @@ export default function ArchiveEntry() {
             <Head>
                 <title>{siteTitle + " " + gamedNb}</title>
             </Head>
+            <div className="flex justify-center mb-6">
+                <Link className="px-3 text-2xl bg-yellow text-black hover:shadow-[5px_5px_0_#6225E6] duration-500" href="/.">Jour {gamedNb}</Link>
+            </div>
             <div className="mb-6">
                 <div className={styles.image}>
                     <Image
