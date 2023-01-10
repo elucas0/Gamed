@@ -8,15 +8,20 @@ export default function ShareButton({ buttons, addButton, stats, setStats, curre
     const [notifyText, setNotifyText] = useState();
     const [points, setPoints] = useState(0);
 
-    setPoints()
+    // setPoints()
 
     useEffect(() => {
-        if (localStorage.getItem("saved") == null) {
-            localStorage.setItem("saved", true);
-            localStorage.setItem("points", 0);
-            setPoints(localStorage.getItem("points"));
+        // if (localStorage.getItem("saved") == null) {
+        //     localStorage.setItem("saved", true);
+        //     localStorage.setItem("points", 0);
+        //     setPoints(localStorage.getItem("points"));
+        // } else {
+        //     setPoints(localStorage.getItem("points"));
+        // }
+        if (localStorage.getItem('played') == null) {
+            localStorage.setItem('stats', JSON.stringify(stats));
         } else {
-            setPoints(localStorage.getItem("points"));
+            const storedStats = JSON.parse(localStorage.getItem('stats'));
         }
 
         localStorage.setItem('played', true);
@@ -25,12 +30,15 @@ export default function ShareButton({ buttons, addButton, stats, setStats, curre
             addButton((buttons) => [...buttons, { number: i + 1 }]);
         }
         setCopyText(localStorage.getItem('results'));
-        // setStats({
-        //     played: parseInt(localStorage.getItem('played')),
-        //     won: parseInt(localStorage.getItem('won')),
-        //     avgGuess: parseInt(localStorage.getItem('avgGuess')),
-        // });
     });
+
+    useEffect(() => {
+        // setStats({
+        //     played: (parseInt(localStorage.getItem('played')) + 1),
+        //     won: parseInt(localStorage.getItem('won')),
+        // });
+    }, [stats]);
+
 
     const copyToClipboard = () => {
         copy(copyText);

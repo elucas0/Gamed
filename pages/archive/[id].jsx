@@ -52,6 +52,7 @@ export default function ArchiveEntry() {
             <Head>
                 <title>{siteTitle + " " + gamedNb}</title>
             </Head>
+            <h1 className="text-2xl text-center mb-6">Jour {gamedNb}</h1>
             <div>
                 <div className={styles.image}>
                     <Image
@@ -60,7 +61,7 @@ export default function ArchiveEntry() {
                         src={image}
                         height={720}
                         width={1280}
-                        alt=""
+                        alt="Gamed Image"
                         quality={75}
                     />
                 </div>

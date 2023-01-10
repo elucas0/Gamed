@@ -9,30 +9,32 @@ import ImageButtons from '../components/imageButtons';
 import GuessButton from '../components/guessButton';
 
 export default function Home() {
-    const gamedNb = 20;
-    const gameName = "Assassin's Creed Origins";
+    const gamedNb = 16;
+    const gameName = "Devil May Cry 5";
     const [points, setPoints] = useState(0);
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
     const [gameState, setGameState] = useState("playing");
     const [buttons, addButton] = useState([{ number: 1 },]);
+    const [stats, setStats] = useState({
+        played: 0,
+        won: 0,
+    });
     const guessData = {
         gameName: gameName,
         gamedNb: gamedNb,
         buttons: buttons,
         value: value,
         currentGuess: currentGuess,
+        stats: stats,
         setImage: setImage,
         setGameState: setGameState,
         addButton: addButton,
         setGuess: setGuess,
+        setStats: setStats,
     };
-    // const [stats, setStats] = useState({
-    //     played: 0,
-    //     won: 0,
-    //     avgGuess: 0,
-    // });
+
 
     const setArrayLength = () => {
         for (let i = buttons.length; i < parseInt(localStorage.getItem("currentGuess")); i++) {
@@ -47,8 +49,12 @@ export default function Home() {
     }, [gamedNb]);
 
     useEffect(() => {
-        if (localStorage.getItem('gamedNb') == null) {
-            localStorage.setItem('points', 0);
+        // if (localStorage.getItem('gamedNb') == null) {
+        //     localStorage.setItem('points', 0);
+        // }
+        if (localStorage.getItem('played')) {
+            const storedStats = JSON.parse(localStorage.getItem('stats'));
+            console.log(stats);
         }
         localStorage.getItem('played') ? RestoreStorageAndState() : ResumeStorageAndState();
     }, []);
@@ -56,12 +62,12 @@ export default function Home() {
     const ResetStorageAndState = () => {
         setImage(`/images/${gamedNb}/01.jpg`);
         setGuess(1);
-        localStorage.removeItem('played');
         localStorage.removeItem('results')
         localStorage.setItem('gamedNb', gamedNb);
         localStorage.setItem('currentImage', "1");
         localStorage.setItem("currentGuess", 1);
         localStorage.setItem("results", `Gamed #${gamedNb} \n🎮 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛\n\nhttps://gamed-seven.vercel.app/`);
+        localStorage.removeItem('played');
     }
 
     const RestoreStorageAndState = () => {
@@ -78,17 +84,12 @@ export default function Home() {
         localStorage.setItem("gameState", gameState);
     }
 
-    const RenderAttempts = () => {
-        if (currentGuess === 6) {
-            return (<h2 className='text-lg sm:text-xl'>1 essai restant</h2>);
-        }
-        return (<h2 className='text-lg sm:text-xl'>{7 - buttons.length} essais restants</h2>);
-    }
     return (
         <Layout home>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
+            <h1 className="text-2xl text-center mb-6">Jour {gamedNb}</h1>
             <div className={styles.frame}>
                 <Image
                     src={currentImage}
@@ -105,7 +106,7 @@ export default function Home() {
                     <ImageButtons setImage={setImage} buttons={buttons} gamedNb={gamedNb} />
                 </div>
                 {gameState == 'lost' &&
-                    <div className='flex justify-center mb-6'>
+                    <div className='flex justify-center mb-3'>
                         <h2 className='text-center text-lg'>Dommage, c'était {gameName}</h2>
                     </div>
                 }
@@ -115,13 +116,10 @@ export default function Home() {
                     </div>
                 }
                 {gameState != "playing"
-                    ? <ShareButton buttons={buttons} addButton={addButton} currentGuess={currentGuess} />
+                    ? <ShareButton buttons={buttons} addButton={addButton} stats={stats} setStats={setStats} currentGuess={currentGuess} />
                     : <>
                         <div className="mb-3">
                             <SearchBar setValue={setValue} value={value} />
-                        </div>
-                        <div className='flex justify-center mb-3'>
-                            <RenderAttempts />
                         </div>
                         <div className='flex justify-center items-center mb-3'>
                             <GuessButton {...guessData}></GuessButton>

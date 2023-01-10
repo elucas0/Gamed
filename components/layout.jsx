@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
                     />
                     <meta name="og:title" content={siteTitle} />
                 </Head>
-                <header className="mb-4 flex items-center justify-between sm:w-full">
+                <header className="mb-3 flex items-center justify-between sm:w-full">
                     <div className="-skew-x-12 hover:shadow-solid-yellow duration-500">
                         <Link className="px-3 text-2xl bg-purple" href="/">{name}</Link>
                     </div>

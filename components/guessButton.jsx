@@ -1,6 +1,6 @@
 import styles from '../styles/utils.module.css';
 
-export default function GuessButton({ gameName, gamedNb, buttons, value, currentGuess, setImage, setGameState, addButton, setGuess }) {
+export default function GuessButton({ gameName, gamedNb, buttons, value, currentGuess, stats, setImage, setGameState, addButton, setGuess, setStats }) {
 
     const guess = (value) => {
         let results = localStorage.getItem('results');
@@ -8,7 +8,14 @@ export default function GuessButton({ gameName, gamedNb, buttons, value, current
             localStorage.setItem("results", results.replace("⬛", "🟨"));
             setGameState("won");
             localStorage.setItem('gameState', "won");
-            localStorage.setItem('points', parseInt(localStorage.getItem('points')) + (7 - currentGuess));
+            setStats((stats) => {
+                return {
+                    ...stats,
+                    won: stats.won + 1
+                }
+            });
+            console.log(stats);
+            // localStorage.setItem('points', parseInt(localStorage.getItem('points')) + (7 - currentGuess));
         } else if (buttons.length <= 5) {
             addButton([...buttons, { number: buttons.length + 1 }]);
             setImage(`/images/${gamedNb}/0${buttons.length + 1}.jpg`);
@@ -20,7 +27,7 @@ export default function GuessButton({ gameName, gamedNb, buttons, value, current
             localStorage.setItem("results", results.replace("⬛", "🟪"));
             setGameState("lost");
             localStorage.setItem('gameState', "lost");
-            localStorage.setItem('points', parseInt(localStorage.getItem('points')) + 1);
+            // localStorage.setItem('points', parseInt(localStorage.getItem('points')) + 1);
         }
     }
 

@@ -4,7 +4,7 @@ import copy from "copy-to-clipboard";
 import { useState } from "react";
 import styles from "../styles/utils.module.css";
 
-export default function FirstPost() {
+export default function About() {
     const [isActive, setIsActive] = useState();
 
     const copyToClipboard = () => {

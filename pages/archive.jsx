@@ -10,9 +10,9 @@ export default function Archive() {
             <Head>
                 <title>Gamed - Archive</title>
             </Head>
-            <h1 className="text-2xl text-center">Archive</h1>
+            <h1 className="text-2xl text-center mb-6">Archive</h1>
             <div className="flex flex-col">
-                <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
+                <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
                     {gamesArchive.map((game) => (
                         <Link key={game.id} className="flex text-3xl bg-purple transition justify-center hover:shadow-solid-yellow duration-500" href={{ pathname: '/archive/[id]', query: { id: game.id } }} >
                             {game.id}
