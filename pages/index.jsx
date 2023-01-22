@@ -9,8 +9,8 @@ import ImageButtons from '../components/imageButtons';
 import GuessButton from '../components/guessButton';
 
 export default function Home() {
-    const gamedNb = 32;
-    const gameName = "The Last Of Us";
+    const gamedNb = 33;
+    const gameName = "Sekiro Shadows Die Twice";
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
