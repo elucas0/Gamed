@@ -10,7 +10,7 @@ import GuessButton from '../components/guessButton';
 
 export default function Home() {
     const gamedNb = 36;
-    const gameName = "Star Wars Jedi Fallen Order";
+    const gameName = "Gran Turismo 7";
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
