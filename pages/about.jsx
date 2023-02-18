@@ -39,9 +39,6 @@ export default function FirstPost() {
                 <p>Contactez moi via Discord :
                     <a className="cursor-pointer text-yellow" onClick={copyToClipboard}> elouann#9933</a>
                 </p>
-                <p>Ou sur Twitter :
-                    <a className="text-yellow" href="https://twitter.com/LucasElouann" target="_blank"> @LucasElouann</a>
-                </p>
 
                 {/* <p>Source code available on <a className="text-yellow" href="https://github.com/PandAmiral/Gamed">GitHub</a>.</p> */}
                 <p>Code source disponible sur <a className="text-yellow" href="https://github.com/PandAmiral/Gamed">GitHub</a></p>
