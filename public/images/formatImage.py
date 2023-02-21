@@ -34,4 +34,5 @@ for file in files:
         img.close()
 
 # Close the program
+print('Done!')
 exit()
