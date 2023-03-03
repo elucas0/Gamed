@@ -15,6 +15,7 @@ export default function GuessButton({ gameName, gamedNb, buttons, value, current
                 }
             });
             console.log(stats);
+            // localStorage.setItem('stats', JSON.stringify(stats));
             // localStorage.setItem('points', parseInt(localStorage.getItem('points')) + (7 - currentGuess));
         } else if (buttons.length <= 5) {
             addButton([...buttons, { number: buttons.length + 1 }]);

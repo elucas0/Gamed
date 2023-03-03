@@ -11,7 +11,7 @@ import GuessButton from '../components/guessButton';
 export default function Home() {
     const gamedNb = 16;
     const gameName = "Devil May Cry 5";
-    const [points, setPoints] = useState(0);
+    // const [points, setPoints] = useState(0);
     const [currentImage, setImage] = useState(`/images/${gamedNb}/01.jpg`);
     const [currentGuess, setGuess] = useState(1);
     const [value, setValue] = useState('');
@@ -43,8 +43,13 @@ export default function Home() {
     };
 
     useEffect(() => {
+        // if (gameState == "won" && localStorage.getItem('played') == null) {
+        //     const storedStats = JSON.parse(localStorage.getItem('stats'));
+        //     storedStats.played += 1;
+        //     localStorage.setItem('stats', JSON.stringify(storedStats));
         if (localStorage.getItem('gamedNb') != gamedNb) {
             ResetStorageAndState();
+            // }
         }
     }, [gamedNb]);
 
@@ -54,6 +59,7 @@ export default function Home() {
         // }
         if (localStorage.getItem('played')) {
             const storedStats = JSON.parse(localStorage.getItem('stats'));
+            // setStats(storedStats);
             console.log(stats);
         }
         localStorage.getItem('played') ? RestoreStorageAndState() : ResumeStorageAndState();
@@ -73,6 +79,7 @@ export default function Home() {
     const RestoreStorageAndState = () => {
         setGameState(localStorage.getItem('gameState'));
         setImage(`/images/${gamedNb}/0${localStorage.getItem("currentImage")}.jpg`);
+        console.log("Restore");
     }
 
     const ResumeStorageAndState = () => {
@@ -97,8 +104,6 @@ export default function Home() {
                     height={540}
                     width={960}
                     priority={true}
-                // placeholder="blur"
-                // blurDataURL=''
                 />
             </div>
             <div>
